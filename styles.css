@@ -67,12 +67,14 @@ p {
 }
 
 .juice-option {
-  margin-left: 20px;
+  margin-left: 20px; /* indent whole row */
 }
+
 .juice-option .dessert {
-  font-size: 16px;
-  color: #eee;
+  font-size: 16px;   /* slightly smaller to show hierarchy */
+  color: #eee;       /* lighter text color */
 }
+
 img {
   display: block;
   margin-left: auto;
