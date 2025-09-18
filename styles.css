@@ -75,7 +75,8 @@ p {
 
 .juice-option .dessert {
   margin-left: 40px;  /* indent only the name */
-  font-size: 16px;
+  font-size: 20px;     /* bigger font */
+  font-weight: 400;
   color: #eee;
 }
 
