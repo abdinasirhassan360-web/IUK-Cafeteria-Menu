@@ -68,7 +68,7 @@ p {
 
 .sub-category {
   color: #db932c;    /* accent color */
-  font-size: 18px;   /* smaller than <h2> */
+  font-size: 30px;   /* smaller than <h2> */
   font-weight: 600;  /* bold */
   margin: 12px 0 6px 0;
 }
