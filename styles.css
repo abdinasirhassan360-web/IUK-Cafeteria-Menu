@@ -1,0 +1,120 @@
+body {
+  background-color: #785b23;
+  color: #db932c;
+  font-family: 'Nunito', sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 1.1;
+}
+
+h1 .restaurant {
+  color: white; /* first word */
+  display: block;
+}
+
+h1 .menu-title {
+  color: #db932c; /* second word */
+  display: block;
+  margin-top: -50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+footer {
+  text-align: center;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+}
+
+.menu {
+  width: 65%;
+  max-width: 450px;
+  min-width: 350px;
+  background-color: #202020;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 20px;                      /* space between columns */
+}
+
+/* responsive: collapse to 1 column on phones */
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid section {
+    background: #202020;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-line {
+  margin-top: 25px;
+}
+
+/* ----- MENU ITEM STYLING ----- */
+.item {
+  display: flex;
+  justify-content: space-between; /* pushes flavor left, price right */
+  align-items: center;
+  gap: 12px;
+  margin: 0; /* reset margins */
+}
+
+.item p {
+  margin: 2px 0; /* reduce vertical spacing between items */
+}
+
+.flavor, .dessert, .appetizer, .main, .drink {
+  flex: 1;
+  text-align: left;
+  color: white;        /* white dish names */
+  font-size: 20px;     /* bigger font */
+  font-weight: 400;
+}
+
+.price {
+  flex: 0 0 60px;
+  text-align: right;
+  color: #db932c; /* keep accent color for prices */
+  font-size: 15px;
+}
+
+/* ----- CATEGORY STYLING ----- */
+.menu-grid h2 {
+  text-align: left;
+  margin-bottom: 5px;
+  color: #db932c;
+}
+
+.menu-grid section {
+  margin-bottom: 20px;   /* space between category blocks */
+  border-bottom: 1px solid #444; /* subtle line between categories */
+  padding-bottom: 10px;
+}
+
+
