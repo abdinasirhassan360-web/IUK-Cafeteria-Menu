@@ -66,14 +66,21 @@ p {
   }
 }
 
+.sub-category {
+  color: #db932c;    /* accent color */
+  font-size: 18px;   /* smaller than <h2> */
+  font-weight: 600;  /* bold */
+  margin: 12px 0 6px 0;
+}
+
 .juice-option .dessert {
-  margin-left: 40px;   /* big indent for clarity */
-  font-size: 16px;     /* smaller to show hierarchy */
-  color: #eee;         /* lighter shade */
+  margin-left: 40px;  /* indent only the name */
+  font-size: 16px;
+  color: #eee;
 }
 
 .juice-option .price {
-  margin-right: 20px;  /* keeps price aligned */
+  margin-right: 20px; /* keeps prices aligned */
 }
 
 
