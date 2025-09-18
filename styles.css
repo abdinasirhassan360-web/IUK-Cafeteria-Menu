@@ -38,8 +38,8 @@ p {
 }
 
 .menu {
-  width: 65%;
-  max-width: 450px;
+  width: 80%;         
+  max-width: 650px;   
   min-width: 350px;
   background-color: #202020;
   margin: 0 auto;
