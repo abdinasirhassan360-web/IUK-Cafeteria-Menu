@@ -66,14 +66,16 @@ p {
   }
 }
 
-.juice-option {
-  margin-left: 20px; /* indent whole row */
+.juice-option .dessert {
+  margin-left: 40px;   /* big indent for clarity */
+  font-size: 16px;     /* smaller to show hierarchy */
+  color: #eee;         /* lighter shade */
 }
 
-.juice-option .dessert {
-  font-size: 16px;   /* slightly smaller to show hierarchy */
-  color: #eee;       /* lighter text color */
+.juice-option .price {
+  margin-right: 20px;  /* keeps price aligned */
 }
+
 
 img {
   display: block;
