@@ -72,17 +72,30 @@ p {
   font-weight: 600;  /* bold */
   margin: 12px 0 6px 0;
 }
+/* Juice items */
+.juice-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;  /* clear indent for the whole row */
+}
 
+/* Name of juice */
 .juice-option .dessert {
-  margin-left: 40px;  /* indent only the name */
-  font-size: 20px;     /* bigger font */
+  font-size: 20px;
   font-weight: 400;
   color: #eee;
+  margin: 0;
 }
 
+/* Price aligned far right */
 .juice-option .price {
-  margin-right: 20px; /* keeps prices aligned */
+  margin: 0;
+  padding-left: 60px;   /* add extra spacing between name and price */
+  text-align: right;
+  min-width: 70px;      /* ensures consistent right alignment */
 }
+
 
 
 img {
