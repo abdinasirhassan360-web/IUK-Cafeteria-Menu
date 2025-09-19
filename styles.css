@@ -1,6 +1,6 @@
 body {
-  background-color: #785b23;
-  color: #db932c;
+  background-color: white;
+  color: #13070c;
   font-family: 'Nunito', sans-serif;
   padding: 20px;
 }
@@ -15,18 +15,18 @@ h1 {
 }
 
 h1 .restaurant {
-  color: white; /* first word */
+  color: #13070c; /* first word */
   display: block;
 }
 
 h1 .menu-title {
-  color: #db932c; /* second word */
+  color: #FFC845; /* second word */
   display: block;
   margin-top: -50px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 30px;  
 }
 
 footer {
@@ -41,7 +41,7 @@ p {
   width: 80%;         
   max-width: 650px;   
   min-width: 350px;
-  background-color: #202020;
+  background-color: white;
   margin: 0 auto;
   padding: 20px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
