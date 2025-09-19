@@ -67,7 +67,7 @@ p {
 }
 
 .sub-category {
-  color: #FFC845;    /* accent color */
+  color: #13070c;    /* accent color */
   font-size: 25px;   /* smaller than <h2> */
   font-weight: 600;  /* bold */
   margin: 12px 0 6px 0;
@@ -84,7 +84,7 @@ p {
 .juice-option .dessert {
   font-size: 20px;
   font-weight: 400;
-  color: #FFC845;
+  color: #13070c;
   margin: 0;
 }
 
@@ -124,7 +124,7 @@ img {
 .flavor, .dessert, .appetizer, .main, .drink {
   flex: 1;
   text-align: left;
-  color: #FFC845;        /* white dish names */
+  color: #13070c;        /* white dish names */
   font-size: 20px;     /* bigger font */
   font-weight: 400;
 }
@@ -140,7 +140,7 @@ img {
 .menu-grid h2 {
   text-align: left;
   margin-bottom: 5px;
-  color: #db932c;
+  color: #336996;
 }
 
 .menu-grid section {
