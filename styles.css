@@ -133,7 +133,7 @@ img {
 .price {
   flex: 0 0 60px;
   text-align: right;
-  color: #FFC845; /* keep accent color for prices */
+  color: #336996; /* keep accent color for prices */
   font-size: 15px;
 }
 
