@@ -127,7 +127,7 @@ img {
   text-align: left;
   color: #13070c;        /* white dish names */
   font-size: 20px;     /* bigger font */
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .price {
@@ -145,6 +145,7 @@ img {
   position: relative;
   display: inline-block;
   padding-bottom: 4px;
+  font-weight: 800;
 }
 
 .menu-grid section {
