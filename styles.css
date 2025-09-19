@@ -124,7 +124,7 @@ img {
 .flavor, .dessert, .appetizer, .main, .drink {
   flex: 1;
   text-align: left;
-  color: white;        /* white dish names */
+  color: #FFC845;        /* white dish names */
   font-size: 20px;     /* bigger font */
   font-weight: 400;
 }
