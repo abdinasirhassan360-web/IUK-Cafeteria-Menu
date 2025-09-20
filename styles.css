@@ -135,6 +135,7 @@ img {
   text-align: right;
   color: #336996; /* keep accent color for prices */
   font-size: 15px;
+  font-weight: 800;
 }
 
 /* ----- CATEGORY STYLING ----- */
