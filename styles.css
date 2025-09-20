@@ -166,6 +166,15 @@ p {
   font-weight: 600;
 }
 
+.price-list {
+  display: flex;
+  flex-direction: column; /* always stacked */
+  align-items: flex-end;  /* keep right aligned */
+  gap: 2px;              /* small space between Small & Large */
+  font-size: 15px;
+  font-weight: 600;
+  color: #336996;
+}
 .price-list span {
   margin-left: 6px;   /* little space between Small and Large */
 }
