@@ -68,9 +68,9 @@ p {
 }
 
 .sub-category {
-  color: #13070c;    /* accent color */
+  color: #2C2C2C;    /* accent color */
   font-size: 25px;   /* smaller than <h2> */
-  font-weight: 600;  /* bold */
+  font-weight: 800;  /* bold */
   margin: 12px 0 6px 0;
 }
 /* Juice items */
@@ -84,8 +84,8 @@ p {
 /* Name of juice */
 .juice-option .dessert {
   font-size: 20px;
-  font-weight: 400;
-  color: #13070c;
+  font-weight: 600;
+  color: #2C2C2C;
   margin: 0;
 }
 
