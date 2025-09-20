@@ -172,6 +172,17 @@ p {
   }
 }
 
+.price-list {
+  text-align: right;
+  font-size: 14px;   /* slightly smaller */
+  color: #336996;
+  font-weight: 600;
+}
+
+.price-list span {
+  margin-left: 6px;   /* little space between Small and Large */
+}
+
 /* ----- CATEGORY STYLING ----- */
 .menu-grid h2 {
   text-align: left;
