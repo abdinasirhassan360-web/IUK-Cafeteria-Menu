@@ -45,7 +45,7 @@ p {
   position: absolute;
   top: 15px;     /* distance from top */
   right: 15px;   /* distance from right */
-  max-width: 70px;
+  max-width: 140px;
   height: auto;
 }
 
