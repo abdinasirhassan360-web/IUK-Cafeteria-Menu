@@ -158,19 +158,6 @@ p {
   font-weight: 1000;
 }
 
-.price {
-  white-space: nowrap; /* keeps inline by default */
-}
-
-/* Mobile: stacked */
-@media (max-width: 600px) {
-  .price {
-    white-space: normal; /* allows wrapping */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* keeps prices aligned to the right */
-  }
-}
 
 .price-list {
   text-align: right;
