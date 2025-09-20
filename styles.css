@@ -41,12 +41,23 @@ p {
   position: relative
 }
 
+.menu-header {
+  display: flex;
+  justify-content: space-between; /* pushes logos to left & right */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .logo {
-  position: absolute;
-  top: 15px;     /* distance from top */
-  right: 15px;   /* distance from right */
-  max-width: 55px;
+  max-width: 140px; /* desktop size */
   height: auto;
+}
+
+/* On phones, shrink logos so they don't block header */
+@media (max-width: 600px) {
+  .logo {
+    max-width: 60px;  /* smaller size on mobile */
+  }
 }
 
 .menu {
