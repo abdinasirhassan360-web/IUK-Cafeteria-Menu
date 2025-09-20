@@ -37,16 +37,15 @@ footer {
 p {
   font-family: 'Nunito', sans-serif;
 }
-
-.menu-header {
-  display: flex;
-  align-items: center;   /* vertically center logo + title */
-  gap: 15px;             /* space between logo and title */
-  margin-bottom: 20px;   /* spacing below header */
+.menu {
+  position: relative
 }
 
 .logo {
-  max-width: 80px;       /* control logo size */
+  position: absolute;
+  top: 15px;     /* distance from top */
+  right: 15px;   /* distance from right */
+  max-width: 70px;
   height: auto;
 }
 
