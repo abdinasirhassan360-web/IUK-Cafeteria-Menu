@@ -150,6 +150,22 @@ p {
   font-weight: 800;
 }
 
+/* Keeps the name + subtext aligned on the left */
+.flavor-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Subtle ingredient note under the item name */
+.details {
+  font-size: 14px;
+  color: #6b6b6b;       /* soft gray text */
+  margin-top: -2px;     /* pull it a bit closer to the main name */
+  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+}
+
 .price {
   flex: 0 0 60px;
   text-align: right;
