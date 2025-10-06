@@ -165,18 +165,21 @@ p {
   font-weight: 500;
   font-family: 'Nunito', sans-serif;
 }
+/* Dawa subtypes under main drink name */
 .details-list {
-  list-style: none;       /* remove bullets */
-  padding: 0;
+  list-style: none;
   margin: 0;
+  padding: 0 0 0 10px; /* small indent under 'Dawa' */
   color: #666;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 500;
 }
+
 .details-list li {
   margin: 0;
 }
+
 
 .flavor-block {
   display: flex;
