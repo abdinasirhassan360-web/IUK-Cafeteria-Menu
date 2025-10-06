@@ -165,6 +165,21 @@ p {
   font-weight: 500;
   font-family: 'Nunito', sans-serif;
 }
+.flavor-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;              /* ensures it stays on the left side */
+}
+
+/* keep the subtle description neat */
+.details {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 500;
+}
 
 .price {
   flex: 0 0 60px;
