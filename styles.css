@@ -372,3 +372,11 @@ border-radius: 2px;
     display: none !important;
   }
 }
+/* Prevent title and logo from splitting to a new page */
+.menu,
+.menu-header {
+  page-break-inside: avoid;
+  page-break-after: avoid;
+  break-inside: avoid;
+  break-after: avoid;
+}
