@@ -360,11 +360,15 @@ border-radius: 2px;
     gap: 8px;
   }
 
-  /* Hide logos or unnecessary UI for print */
-  .logo, a, button {
+  /* Keep logos visible for branding */
+  .logo {
+    display: block !important;
+    max-width: 70px;  /* slightly smaller for print */
+    height: auto;
+  }
+
+  /* Hide only links and buttons (not logo) */
+  a, button {
     display: none !important;
   }
 }
-
-
-
