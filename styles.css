@@ -405,7 +405,7 @@ border-radius: 2px;
     line-height: 1.2; /* prevent overlapping */
   }
   h1 .menu-title {
-  margin-top: -33px;  /* gentle lift for print */
+  margin-top: -26px;  /* gentle lift for print */
   line-height: 1.0;
 }
 }
