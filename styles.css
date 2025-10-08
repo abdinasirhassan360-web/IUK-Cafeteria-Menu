@@ -21,11 +21,11 @@ h1 .restaurant {
 }
 
 h1 .menu-title {
-  color: #FFC845; /* second word */
+  color: #FFC845;
   display: block;
-  margin-top: -50px;
+  margin-top: -20px;   /* gentler overlap */
+  line-height: 1.1;    /* ensures vertical breathing room */
 }
-
 h2 {
   font-size: 30px;  
 }
@@ -390,4 +390,12 @@ border-radius: 2px;
 }
 .menu-header .logo {
   max-width: 60px; /* smaller logo for print */
+}
+@media print {
+  h1 {
+    line-height: 1.2; /* prevent overlapping */
+  }
+  h1 .menu-title {
+    margin-top: -10px; /* lighter offset for print */
+  }
 }
