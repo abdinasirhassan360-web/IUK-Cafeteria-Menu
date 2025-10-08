@@ -372,11 +372,22 @@ border-radius: 2px;
     display: none !important;
   }
 }
-/* Prevent title and logo from splitting to a new page */
+/* keep header + grid together as a single block */
+.menu-wrapper,
 .menu,
-.menu-header {
+.menu-header,
+.menu-grid {
   page-break-inside: avoid;
-  page-break-after: avoid;
   break-inside: avoid;
+  page-break-after: avoid;
   break-after: avoid;
+}
+
+/* reduce header size a bit for printing to help fit everything */
+.menu-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+.menu-header .logo {
+  max-width: 60px; /* smaller logo for print */
 }

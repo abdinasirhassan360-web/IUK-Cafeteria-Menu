@@ -6,23 +6,20 @@
     <title>Cafe Menu</title>
     <link href="styles.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
-    
   </head>
   <body>
     <div class="menu">
-      <div class="menu-header">
-  <img src="iuk-logo-v2.png" alt="IUK Logo" class="logo left-logo">
-  
-  <h1>
-    <span class="restaurant">CAFETERIA</span><br>
-    <span class="menu-title">MENU</span>
-  </h1>
-  
-  <img src="iuk-logo-v2.png" alt="IUK Logo" class="logo right-logo">
-</div>
-        
-        <!-- ✅ changed to div, not nested main -->
+      <!-- new wrapper groups header + grid so they print together -->
+      <div class="menu-wrapper">
+        <div class="menu-header">
+          <img src="iuk-logo-v2.png" alt="IUK Logo" class="logo left-logo">
+          <h1>
+            <span class="restaurant">CAFETERIA</span><br>
+            <span class="menu-title">MENU</span>
+          </h1>
+          <img src="iuk-logo-v2.png" alt="IUK Logo" class="logo right-logo">
+        </div>
+
         <div class="menu-grid">
           <section>
             <h2>BREAKFAST</h2>
@@ -44,8 +41,8 @@
             <article class="item"><p class="dessert">Beef Smokey</p><p class="price">40/-</p></article>
             <article class="item"><p class="dessert">Chips Plain -Small</p><p class="price">50/-</p></article>
             <article class="item"><p class="dessert">Chips Plain -Large</p><p class="price">100/-</p></article>
-
           </section>
+
           <section>
             <h2>MAIN MEALS</h2>
             <article class="item"><p class="main">Pilau</p><p class="price">150/-</p></article>
@@ -60,6 +57,7 @@
             <article class="item"><p class="main">White Rice</p><p class="price">50/-</p></article>
             <article class="item"><p class="main">Ugali</p><p class="price">50/-</p></article>
           </section>
+
           <section>
             <h2>SIDES & VEGGIES</h2>
             <article class="item"><p class="appetizer">Managu</p><p class="price">60/-</p></article>
@@ -72,129 +70,59 @@
             <article class="item"><p class="appetizer">Vegetable Stew</p><p class="price">50/-</p></article>
             <article class="item"><p class="appetizer">Potato Stew</p><p class="price">50/-</p></article>
           </section>
+
           <section>
-  <h2>HOT BEVERAGES</h2>
-  <article class="item">
-    <p class="drink">Black Tea</p><p class="price">30/-</p>
-  </article>
-  <article class="item">
-    <p class="drink">Milk Tea</p><p class="price">30/-</p>
-  </article>
-  <article class="item">
-    <p class="drink">Special Tea (White Only)</p><p class="price">50/-</p>
-  </article>
-  <article class="item">
-    <p class="drink">Black Coffee</p><p class="price">30/-</p>
-  </article>
-  <article class="item">
-    <p class="drink">White Coffee</p><p class="price">50/-</p>
-  </article>
-  <article class="item">
-    <p class="drink">Cappuccino</p><p class="price">150/-</p>
-  </article>
-  <article class="item">
-    <p class="drink">Café Latte</p><p class="price">150/-</p>
-  </article>
-  <article class="item">
-    <p class="drink">Chai Latte</p><p class="price">150/-</p>
-  </article>
-  <article class="item">
-    <p class="drink">Masala Tea</p><p class="price">50/-</p>
-  </article>
-  <article class="item">
-    <p class="drink">Ginger Tea</p><p class="price">50/-</p>
-  </article>
-  <article class="item dawa">
-  <div class="flavor-block">
-    <p class="drink">Chai Dawa</p>
-    <ul class="dawa-types">
-      <li>Honey</li>
-      <li>Ginger</li>
-      <li>Lemon</li>
-      <li>Garlic</li>
-    </ul>
-  </div>
-  <p class="price">100/-</p>
-</article>
+            <h2>HOT BEVERAGES</h2>
+            <article class="item"><p class="drink">Black Tea</p><p class="price">30/-</p></article>
+            <article class="item"><p class="drink">Milk Tea</p><p class="price">30/-</p></article>
+            <article class="item"><p class="drink">Special Tea (White Only)</p><p class="price">50/-</p></article>
+            <article class="item"><p class="drink">Black Coffee</p><p class="price">30/-</p></article>
+            <article class="item"><p class="drink">White Coffee</p><p class="price">50/-</p></article>
+            <article class="item"><p class="drink">Cappuccino</p><p class="price">150/-</p></article>
+            <article class="item"><p class="drink">Café Latte</p><p class="price">150/-</p></article>
+            <article class="item"><p class="drink">Chai Latte</p><p class="price">150/-</p></article>
+            <article class="item"><p class="drink">Masala Tea</p><p class="price">50/-</p></article>
+            <article class="item"><p class="drink">Ginger Tea</p><p class="price">50/-</p></article>
 
-</section>
-<section>
-  <h2>COLD BEVERAGES</h2>
+            <article class="item dawa">
+              <div class="flavor-block">
+                <p class="drink">Chai Dawa</p>
+                <ul class="dawa-types">
+                  <li>Honey</li>
+                  <li>Ginger</li>
+                  <li>Lemon</li>
+                  <li>Garlic</li>
+                </ul>
+              </div>
+              <p class="price">100/-</p>
+            </article>
+          </section>
 
-  <article class="item">
-    <p class="dessert">Soda 300ml</p><p class="price">50/-</p>
-  </article>
-  <article class="item">
-    <p class="dessert">Soda 500ml</p><p class="price">80/-</p>
-  </article>
-  <article class="item">
-    <p class="dessert">Minute Maid 400ml</p><p class="price">80/-</p>
-  </article>
-  <article class="item">
-    <p class="dessert">Mineral Water 500ml</p><p class="price">30/-</p>
-  </article>
+          <section>
+            <h2>COLD BEVERAGES</h2>
+            <article class="item"><p class="dessert">Soda 300ml</p><p class="price">50/-</p></article>
+            <article class="item"><p class="dessert">Soda 500ml</p><p class="price">80/-</p></article>
+            <article class="item"><p class="dessert">Minute Maid 400ml</p><p class="price">80/-</p></article>
+            <article class="item"><p class="dessert">Mineral Water 500ml</p><p class="price">30/-</p></article>
+            <article class="item"><p class="dessert">Mineral Water 1litre</p><p class="price">50/-</p></article>
 
-  <article class="item">
-    <p class="dessert">Mineral Water 1litre</p><p class="price">50/-</p>
-  </article>
-  <!-- Fresh Juice group label -->
-  <h3 class="sub-category">FRESH JUICE:</h3>
+            <h3 class="sub-category">FRESH JUICE:</h3>
+            <article class="item"><p class="dessert">Mango</p><div class="price-list"><span>Small 60/-</span><span>Large 100/-</span></div></article>
+            <article class="item"><p class="dessert">Passion</p><div class="price-list"><span>Small 60/-</span><span>Large 100/-</span></div></article>
+            <article class="item"><p class="dessert">Pineapple Mint</p><div class="price-list"><span>Small 60/-</span><span>Large 100/-</span></div></article>
+            <article class="item"><p class="dessert">Lemonade</p><div class="price-list"><span>100/-</span></div></article>
+            <article class="item"><p class="dessert">Cocktail</p><div class="price-list"><span>Small 60/-</span><span>Large 100/-</span></div></article>
 
-  <article class="item">
-  <p class="dessert">Mango</p>
-  <div class="price-list">
-    <span>Small 60/-</span>
-    <span>Large 100/-</span>
-  </div>
-</article>
-
-<article class="item">
-  <p class="dessert">Passion</p>
-  <div class="price-list">
-    <span>Small 60/-</span>
-    <span>Large 100/-</span>
-  </div>
-</article>
-
-<article class="item">
-  <p class="dessert">Pineapple Mint</p>
-  <div class="price-list">
-    <span>Small 60/-</span>
-    <span>Large 100/-</span>
-  </div>
-</article>
-
-<article class="item">
-  <p class="dessert">Lemonade</p>
-  <div class="price-list">
-    <span>100/-</span>
-  </div>
-</article>
-
-<article class="item">
-  <p class="dessert">Cocktail</p>
-  <div class="price-list">
-    <span>Small 60/-</span>
-    <span>Large 100/-</span>
-  </div>
-</article>
-
-<article class="item">
-  <div class="flavor-block">
-    <p class="dessert">Peruvian Mix</p>
-    <p class="details">(Pineapple • Orange • Apple)</p>
-  </div>
-  <div class="price-list">
-    <span>Small 60/-</span>
-    <span>Large 100/-</span>
-  </div>
-</article>
-
-
-
-</section>
-        </div>
-      </main>
-    </div>
+            <article class="item">
+              <div class="flavor-block">
+                <p class="dessert">Peruvian Mix</p>
+                <p class="details">(Pineapple • Orange • Apple)</p>
+              </div>
+              <div class="price-list"><span>Small 60/-</span><span>Large 100/-</span></div>
+            </article>
+          </section>
+        </div> <!-- .menu-grid -->
+      </div> <!-- .menu-wrapper -->
+    </div> <!-- .menu -->
   </body>
 </html>
