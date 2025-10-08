@@ -23,9 +23,10 @@ h1 .restaurant {
 h1 .menu-title {
   color: #FFC845;
   display: block;
-  margin-top: -20px;   /* gentler overlap */
-  line-height: 1.1;    /* ensures vertical breathing room */
+  margin-top: -12px;  /* slightly overlaps but not touching */
+  line-height: 1.0;   /* compact stacking */
 }
+
 h2 {
   font-size: 30px;  
 }
@@ -320,7 +321,7 @@ border-radius: 2px;
     break-inside: avoid;
     page-break-inside: avoid;
     padding-bottom: 8px;
-    border-bottom: 1px solid #ccc; /* light divider for print */
+    border-bottom: 1px solid #A4243B; /* light divider for print */
   }
 
   /* Adjust headings and spacing */
@@ -396,6 +397,7 @@ border-radius: 2px;
     line-height: 1.2; /* prevent overlapping */
   }
   h1 .menu-title {
-    margin-top: -10px; /* lighter offset for print */
-  }
+  margin-top: -8px;  /* gentle lift for print */
+  line-height: 1.0;
+}
 }
