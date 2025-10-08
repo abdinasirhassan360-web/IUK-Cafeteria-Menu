@@ -18,6 +18,7 @@ h1 {
 h1 .restaurant {
   color: #2A2570; /* first word */
   display: block;
+  font-size: 40px;
 }
 
 h1 {
@@ -30,7 +31,7 @@ h1 .menu-title {
   display: block;
   margin-top: -33px;  /* stacks tightly without touching */
   letter-spacing: 0.5px; /* keeps letters readable */
-  font-size: 40px;
+  font-size: 30px;
 }
 
 
