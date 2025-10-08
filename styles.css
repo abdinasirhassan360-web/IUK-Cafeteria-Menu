@@ -30,6 +30,7 @@ h1 .menu-title {
   display: block;
   margin-top: -33px;  /* stacks tightly without touching */
   letter-spacing: 0.5px; /* keeps letters readable */
+  font-size: 40px;
 }
 
 
@@ -370,7 +371,7 @@ border-radius: 2px;
   /* Keep logos visible for branding */
   .logo {
     display: block !important;
-    max-width: 70px;  /* slightly smaller for print */
+    max-width: 80px;  /* slightly smaller for print */
     height: auto;
   }
 
