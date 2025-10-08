@@ -20,12 +20,18 @@ h1 .restaurant {
   display: block;
 }
 
+h1 {
+  line-height: 1.05; /* keeps title compact */
+  margin-bottom: 5px; /* small gap below header */
+}
+
 h1 .menu-title {
   color: #FFC845;
   display: block;
-  margin-top: -12px;  /* slightly overlaps but not touching */
-  line-height: 1.0;   /* compact stacking */
+  margin-top: -22px;  /* stacks tightly without touching */
+  letter-spacing: 0.5px; /* keeps letters readable */
 }
+
 
 h2 {
   font-size: 30px;  
