@@ -247,7 +247,7 @@ p {
   gap: 0px;              /* small space between Small & Large */
   font-size: 18px;
   font-weight: 700;
-  color: #336996;
+  color: #2358ba;
   line-height: 1.1;
 }
 .price-list span {
@@ -259,7 +259,7 @@ p {
 .menu-grid h2 {
   text-align: left;
   margin-bottom: 5px;
-  color: #2358ba;
+  color: #2A2570; /* dark blue */
   position: relative;
   display: inline-block;
   padding-bottom: 4px;
