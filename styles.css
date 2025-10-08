@@ -28,7 +28,7 @@ h1 {
 h1 .menu-title {
   color: #FFC845;
   display: block;
-  margin-top: -30px;  /* stacks tightly without touching */
+  margin-top: -33px;  /* stacks tightly without touching */
   letter-spacing: 0.5px; /* keeps letters readable */
 }
 
