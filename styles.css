@@ -236,7 +236,7 @@ p {
 .price {
   flex: 0 0 60px;
   text-align: right;
-  color: #2a2570; /* keep accent color for prices */
+  color: #00a8ff; /* keep accent color for prices */
   font-size: 20px;
   font-weight: 1000;
 }
@@ -245,7 +245,7 @@ p {
 .price-list {
   text-align: right;
   font-size: 14px;   /* slightly smaller */
-  color: #2a2570;
+  color: #00a8ff;
   font-weight: 600;
 }
 
@@ -256,7 +256,7 @@ p {
   gap: 0px;              /* small space between Small & Large */
   font-size: 18px;
   font-weight: 700;
-  color: #2a2570;
+  color: #00a8ff;
   line-height: 1.1;
 }
 .price-list span {
