@@ -53,31 +53,31 @@ p {
 /* ===== HEADER CONTAINER ===== */
 .menu-header {
   display: flex;
-  justify-content: space-between; /* logo left, text right */
-  align-items: center;            /* vertical centering */
-  background-color: white;
-  padding: 16px 48px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;  /* logo left, text right */
+  align-items: center;             /* vertical centering */
+  background: transparent;         /* let the .menu white box show */
+  padding: 16px 32px;              /* inner spacing */
   margin-bottom: 20px;
   flex-wrap: nowrap;
-  gap: 20px;                      /* gentle spacing between logo & text */
+  gap: 24px;                       /* space between logo and text */
+  box-shadow: none;                /* only the .menu card has shadow */
 }
 
 /* ===== LOGO IMAGE ===== */
 .menu-header .logo {
-  height: 12vh;        /* scales relative to screen height */
-  width: auto;         /* preserves aspect ratio */
-  max-height: 100px;   /* prevents it from growing too tall */
+  height: 110px;        /* big enough to match text height */
+  width: auto;          /* keeps aspect ratio */
   object-fit: contain;
-  flex-shrink: 0;      /* keeps logo from shrinking when space is tight */
+  flex-shrink: 0;
 }
 
-/* ===== RIGHT TEXT SECTION ===== */
 .menu-title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* align “CAFETERIA MENU” to the right */
   text-align: right;
-  line-height: 1.1;
-  flex: 1;             /* allows the text to fill remaining space */
-  min-width: 150px;
+  line-height: 1.05;
+  flex: 1;
 }
 
 /* CAFETERIA (blue) */
