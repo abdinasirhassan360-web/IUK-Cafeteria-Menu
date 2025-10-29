@@ -94,6 +94,18 @@ p {
   outline: none;       /* ensures no outline */
   background: none;    /* removes any background if inherited */
 }
+.title-container {
+  width: calc(100% + 40px);     /* cancel out .menu’s 20px left/right padding */
+  margin-left: -20px;           /* shift left to align with menu edges */
+  margin-right: -20px;          /* shift right to align with menu edges */
+  background: white;            /* keep clean background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 16px 48px;
+  border-radius: 8px;
+}
 
 
 .title-block .restaurant {
