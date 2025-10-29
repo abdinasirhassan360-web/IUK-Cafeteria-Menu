@@ -1,6 +1,6 @@
 /* ---------- BASE STYLING ---------- */
 body {
-  background-color: #f8f8f8; /* light gray for contrast */
+  background-color: #f8f8f8;
   color: #13070c;
   font-family: 'Nunito', sans-serif;
   padding: 20px;
@@ -12,31 +12,9 @@ h1 {
   margin-top: 0;
   font-family: 'Lora', serif;
   margin-bottom: 15px;
-  text-align: center;
   font-weight: 800;
   line-height: 1.1;
 }
-
-h1 .restaurant {
-  color: #29607b; /* blue for CAFETERIA */
-  font-size: 40px;
-  font-family: 'Lora', serif;
-  font-weight: 800;
-  margin-bottom: 4px; /* spacing between CAFETERIA and MENU */
-}
-
-h1 .menu-title {
-  color: #ffbb15; /* yellow for MENU */
-  font-size: 40px;
-  font-family: 'Lora', serif;
-  font-weight: 800;
-  margin-top: 0;
-}
-h1 {
-  line-height: 1.05;
-  margin-bottom: 5px;
-}
-
 
 h2 {
   font-size: 30px;
@@ -57,92 +35,90 @@ p {
   width: 85%;
   max-width: 900px;
   min-width: 350px;
-  margin: 40px auto; /* centers and adds spacing */
+  margin: 40px auto;
   padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); /* white card effect */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
-/* ---------- HEADER ---------- */
+/* ---------- HEADER (Logo + Title) ---------- */
 .menu-header {
   display: flex;
   justify-content: flex-start; /* logo left, text right */
-  align-items: center;          /* vertical centering */
+  align-items: center;
   background-color: white;
   padding: 16px 48px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  gap: 40px; /* spacing between logo and title */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  gap: 24px;                    /* spacing between logo and text */
-  border-radius: 12px;          /* slight card effect */
+  width: calc(100% + 80px); /* cancel out .menu padding (40px on each side) */
+  margin-left: -40px;
+  margin-right: -40px;
 }
 
-.logo {
-  height: 120px;   /* scales based on height */
-  width: auto;     /* maintain proportions */
+/* logo scales by height */
+.menu-header .logo {
+  height: 95px;
+  width: auto;
+  flex-shrink: 0;
 }
 
-.title-block {
+/* right-aligned title text beside logo */
+.menu-header h1 {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-end; /* push text right */
   justify-content: center;
-  text-align: right;
+  margin: 0;
   line-height: 1.05;
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  border: none;        /* ensures no border */
-  outline: none;       /* ensures no outline */
-  background: none;    /* removes any background if inherited */
-}
-.title-container {
-  width: calc(100% + 40px);     /* cancel out .menu’s 20px left/right padding */
-  margin-left: -20px;           /* shift left to align with menu edges */
-  margin-right: -20px;          /* shift right to align with menu edges */
-  background: white;            /* keep clean background */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 16px 48px;
-  border-radius: 8px;
+  text-align: right;
 }
 
-
-.title-block .restaurant {
-  color: #29607b;  /* blue text */
-  font-size: 40px;
+.menu-header .restaurant {
+  color: #29607b;
   font-family: 'Lora', serif;
+  font-size: 40px;
   font-weight: 800;
+  display: block;
   margin-bottom: 4px;
 }
 
-.title-block .menu-title {
-  color: #ffbb15;  /* yellow text */
-  font-size: 40px;
+.menu-header .menu-title {
+  color: #ffbb15;
   font-family: 'Lora', serif;
+  font-size: 40px;
   font-weight: 800;
-  margin: 0;
+  display: block;
+  margin-top: -30px;
 }
 
-/* Optional: responsive fix for mobile */
+/* ---------- RESPONSIVE HEADER ---------- */
 @media (max-width: 600px) {
   .menu-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 20px;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
   }
 
-  .title-block {
-    align-items: center;
-    text-align: center;
+  .menu-header .logo {
+    height: 70px;
   }
 
-  .logo {
-    height: auto;
-    max-width: 120px; /* scales proportionally instead of fixed height */
+  .menu-header h1 {
+    font-size: 32px;
+    align-items: flex-end;
+  }
+
+  .menu-header .restaurant,
+  .menu-header .menu-title {
+    font-size: 32px;
   }
 }
-
 
 /* ---------- GRID ---------- */
 .menu-grid {
