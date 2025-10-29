@@ -1,8 +1,23 @@
+/* --- Page background so the white card shows --- */
 body {
-  background-color: white;
+  background-color: #f4f6f8;   /* light gray page background */
   color: #13070c;
   font-family: 'Nunito', sans-serif;
   padding: 20px;
+}
+
+/* --- Menu card (visible white card with shadow) --- */
+.menu {
+  width: 80%;
+  max-width: 650px;
+  min-width: 350px;
+  background-color: #ffffff;    /* white card */
+  margin: 24px auto;            /* centered with spacing from top */
+  padding: 20px;
+  border-radius: 12px;          /* rounded corners */
+  box-shadow: 0 10px 30px rgba(18, 35, 50, 0.12); /* stronger, softer shadow */
+  overflow: hidden;             /* keeps header + grid inside rounded corners */
+  position: relative;
 }
 
 h1 {
@@ -123,16 +138,6 @@ p {
   }
 }
 /* ===== MENU CONTAINER ===== */
-
-.menu {
-  width: 80%;         
-  max-width: 650px;   
-  min-width: 350px;
-  background-color: white;
-  margin: 0 auto;
-  padding: 20px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-}
 
 .menu-grid {
   display: grid;
