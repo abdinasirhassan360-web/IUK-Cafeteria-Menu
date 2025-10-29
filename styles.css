@@ -1,4 +1,47 @@
-/* ---------- HEADER (FINAL FIXED VERSION) ---------- */
+/* ---------- BASE STYLING ---------- */
+body {
+  background-color: #f8f8f8;
+  color: #13070c;
+  font-family: 'Nunito', sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  font-family: 'Lora', serif;
+  margin-bottom: 15px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+footer {
+  text-align: center;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ---------- MENU CONTAINER ---------- */
+.menu {
+  position: relative;
+  background-color: white;
+  width: 85%;
+  max-width: 900px;
+  min-width: 350px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- HEADER (Logo + Title) ---------- */
 .menu-header {
   display: flex;
   justify-content: space-between; /* logo on left, text on right */
@@ -14,7 +57,6 @@
   margin-top: -20px;
   margin-bottom: 20px;
 }
-
 /* Logo scales by height */
 .logo {
   height: 90px; /* adjusted smaller */
@@ -22,59 +64,297 @@
   flex-shrink: 0; /* prevent squishing */
 }
 
-/* Title text styling */
-.title-block {
+/* logo scales by height */
+.menu-header .logo {
+  height: 95px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+/* right-aligned title text beside logo */
+.menu-header h1 {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* pushes text to right */
+  align-items: flex-end; /* push text right */
   justify-content: center;
-  text-align: right;
+  margin: 0;
   line-height: 1.05;
-  flex: 1;
-  white-space: nowrap;
-  overflow: visible; /* prevent clipping */
-  border: none;
-  outline: none;
-  background: none;
+  text-align: right;
 }
 
-/* CAFETERIA */
-.title-block .restaurant {
+.menu-header .restaurant {
   color: #29607b;
-  font-size: 42px;
   font-family: 'Lora', serif;
+  font-size: 40px;
   font-weight: 800;
-  margin: 0;
+  display: block;
+  margin-bottom: 4px;
 }
 
-/* MENU */
-.title-block .menu-title {
+.menu-header .menu-title {
   color: #ffbb15;
-  font-size: 42px;
   font-family: 'Lora', serif;
+  font-size: 40px;
   font-weight: 800;
-  margin: 0;
+  display: block;
+  margin-top: -30px;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 700px) {
+/* ---------- RESPONSIVE HEADER ---------- */
+@media (max-width: 600px) {
   .menu-header {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 20px;
     width: 100%;
     margin: 0;
-    padding: 20px;
+    box-shadow: none;
   }
 
-  .title-block {
-    align-items: center;
-    text-align: center;
-    white-space: normal;
+  .menu-header .logo {
+    height: 70px;
+  }
+
+  .menu-header h1 {
+    font-size: 32px;
+    align-items: flex-end;
+  }
+
+  .menu-header .restaurant,
+  .menu-header .menu-title {
+    font-size: 32px;
+  }
+}
+
+/* ---------- GRID ---------- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid section {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}
+
+/* ---------- CATEGORY HEADINGS ---------- */
+.menu-grid h2 {
+  text-align: left;
+  margin-bottom: 5px;
+  color: #29607b;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  font-weight: 700;
+}
+
+.menu-grid h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffbb15;
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+.menu-grid section {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #A4243B;
+  padding-bottom: 10px;
+}
+
+/* ---------- MENU ITEMS ---------- */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+}
+
+.item p {
+  margin: 2px 0;
+}
+
+.flavor,
+.dessert,
+.appetizer,
+.main,
+.drink {
+  flex: 1;
+  text-align: left;
+  color: #2C2C2C;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.details {
+  font-size: 14px;
+  color: #666;
+  margin-top: -2px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.price {
+  flex: 0 0 60px;
+  text-align: right;
+  color: #265E9A;
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+/* ---------- PRICE LIST ---------- */
+.price-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #265E9A;
+  line-height: 1.1;
+}
+
+/* ---------- JUICE SECTION ---------- */
+.sub-category {
+  color: #2C2C2C;
+  font-size: 25px;
+  font-weight: 800;
+  margin: 12px 0 6px 0;
+}
+
+.juice-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.juice-option .dessert {
+  font-size: 20px;
+  font-weight: 800;
+  color: #2C2C2C;
+  margin: 0;
+}
+
+.juice-option .price {
+  margin: 0;
+  padding-left: 60px;
+  text-align: right;
+  min-width: 70px;
+}
+
+/* ---------- DAWA SECTION ---------- */
+.dawa-types {
+  list-style: none;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.dawa-types li {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2C2C2C;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.details-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 10px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.details-list li {
+  margin: 0;
+}
+
+/* ---------- PRINT STYLES ---------- */
+@media print {
+  @page {
+    size: A3 portrait;
+    margin: 1cm;
+  }
+
+  body {
+    background: white;
+    color: #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 90%;
+  }
+
+  .menu {
+    width: 100%;
+    max-width: none;
+    box-shadow: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    page-break-inside: avoid;
+  }
+
+  .menu-grid section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border-bottom: 1px solid #A4243B;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #2358ba !important;
+  }
+
+  .menu-grid h2::after {
+    background: #FFC845 !important;
+  }
+
+  .price {
+    font-size: 18px;
   }
 
   .logo {
-    height: 70px;
+    max-width: 80px;
   }
+
+  a, button {
+    display: none !important;
+  }
+}
+
+/* ---------- PAGE BREAK CONTROL ---------- */
+.menu-wrapper,
+.menu,
+.menu-header,
+.menu-grid {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  page-break-after: avoid;
+  break-after: avoid;
 }
