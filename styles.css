@@ -50,29 +50,79 @@ p {
   position: relative
 }
 
+/* ===== HEADER CONTAINER ===== */
 .menu-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between; /* logo left, text right */
+  align-items: center;            /* vertical centering */
+  background-color: white;
+  padding: 16px 48px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+  gap: 20px;                      /* gentle spacing between logo & text */
 }
 
-.menu-header h1 {
-  flex: 1;             /* take up available middle space */
-  margin: 0;           /* remove weird spacing */
+/* ===== LOGO IMAGE ===== */
+.menu-header .logo {
+  height: 12vh;        /* scales relative to screen height */
+  width: auto;         /* preserves aspect ratio */
+  max-height: 100px;   /* prevents it from growing too tall */
+  object-fit: contain;
+  flex-shrink: 0;      /* keeps logo from shrinking when space is tight */
 }
 
-.logo {
-  max-width: 80px; /* desktop size */
-  height: auto;
+/* ===== RIGHT TEXT SECTION ===== */
+.menu-title-block {
+  text-align: right;
+  line-height: 1.1;
+  flex: 1;             /* allows the text to fill remaining space */
+  min-width: 150px;
 }
 
-/* On phones, shrink logos so they don't block header */
-@media (max-width: 600px) {
-  .logo {
-    max-width: 55px;  /* smaller size on mobile */
+/* CAFETERIA (blue) */
+.menu-title-block .cafeteria {
+  color: #29607b;
+  font-size: clamp(28px, 4vw, 40px); /* responsive scaling */
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* MENU (yellow) */
+.menu-title-block .menu-sub {
+  color: #ffbb15;
+  font-size: clamp(28px, 4vw, 40px);
+  font-family: 'Lora', serif;
+  font-weight: 800;
+  margin: -6px 0 0 0;  /* slight upward pull for tight stacking */
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 700px) {
+  .menu-header {
+    flex-direction: column;       /* stack logo above text */
+    align-items: center;
+    text-align: center;
+    padding: 12px 24px;
+  }
+
+  .menu-header .logo {
+    height: 10vh;                 /* slightly smaller on mobile */
+    max-height: 70px;
+    margin-bottom: 8px;
+  }
+
+  .menu-title-block {
+    text-align: center;
+  }
+
+  .menu-title-block .cafeteria,
+  .menu-title-block .menu-sub {
+    font-size: clamp(22px, 5vw, 30px);
   }
 }
+/* ===== MENU CONTAINER ===== */
 
 .menu {
   width: 80%;         
