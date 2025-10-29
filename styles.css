@@ -43,32 +43,33 @@ p {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
+/* ...existing code... */
+
 /* ---------- HEADER (FINAL FIXED VERSION) ---------- */
 .menu-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding: 16px 32px; /* Reduced padding */
+  padding: 12px 24px;        /* keep some inner padding but stay inside .menu */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  gap: 16px; /* Reduced gap */
-  width: calc(100% + 64px); /* Adjusted to match new padding */
-  margin-left: -32px;
-  margin-right: -32px;
-  margin-top: -20px;
-  margin-bottom: 20px;
-  overflow: hidden; /* Prevent overflow */
+  gap: 16px;
+  width: 100%;               /* stay inside the .menu width */
+  margin: 0 0 20px 0;        /* no negative margins */
+  box-sizing: border-box;    /* ensure padding counted inside width */
 }
 
-/* Logo scales by height */
+/* Logo scales by height and is capped so it can't push the header wide */
 .logo {
-  height: 70px; /* Reduced from 90px */
+  height: 64px;              /* reduce size */
+  max-width: 140px;          /* prevent very wide images */
   width: auto;
-  flex-shrink: 0;
+  flex: 0 0 auto;            /* do not grow or shrink too much */
+  object-fit: contain;
 }
 
-/* Title text styling */
+/* Title text styling - allow it to shrink and truncate if necessary */
 .title-block {
   display: flex;
   flex-direction: column;
@@ -76,64 +77,44 @@ p {
   justify-content: center;
   text-align: right;
   line-height: 1;
-  flex: 1;
-  min-width: 0; /* Allow text to wrap if needed */
+  flex: 1 1 auto;            /* allow shrinking/growing */
+  min-width: 0;              /* critical: allows flex children to shrink */
+  overflow: hidden;          /* prevent overflow outside header */
 }
 
 /* CAFETERIA */
-.title-block .restaurant {
-  color: #29607b;
-  font-size: clamp(32px, 5vw, 42px); /* Responsive font size */
-  font-family: 'Lora', serif;
-  font-weight: 800;
-  margin: 0;
-}
-
-/* MENU */
+.title-block .restaurant,
 .title-block .menu-title {
-  color: #ffbb15;
-  font-size: clamp(32px, 5vw, 42px); /* Responsive font size */
-  font-family: 'Lora', serif;
-  font-weight: 800;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;   /* show ellipsis if text is too long */
 }
 
-/* Adjust mobile breakpoint */
+/* keep responsive adjustments */
 @media (max-width: 700px) {
   .menu-header {
-    padding: 16px;
-    width: calc(100% + 32px);
-    margin-left: -16px;
-    margin-right: -16px;
-  }
-
-  .logo {
-    height: 60px; /* Even smaller on mobile */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    margin: 0 0 16px 0;
   }
 
   .title-block {
     align-items: center;
     text-align: center;
-  }
-}
-.menu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-@media (max-width: 600px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
+    white-space: normal;      /* allow wrapping on small screens */
   }
 
-  .menu-grid section {
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
+  .logo {
+    height: 56px;
+    max-width: 110px;
   }
 }
 
+/* ...existing code... */
 /* ---------- CATEGORY HEADINGS ---------- */
 .menu-grid h2 {
   text-align: left;
