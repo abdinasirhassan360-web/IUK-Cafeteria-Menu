@@ -18,9 +18,19 @@ h1 {
 }
 
 h1 .restaurant {
-  color: #29607b;
-  display: block;
+  color: #29607b; /* blue for CAFETERIA */
   font-size: 40px;
+  font-family: 'Lora', serif;
+  font-weight: 800;
+  margin-bottom: 4px; /* spacing between CAFETERIA and MENU */
+}
+
+h1 .menu-title {
+  color: #ffbb15; /* yellow for MENU */
+  font-size: 40px;
+  font-family: 'Lora', serif;
+  font-weight: 800;
+  margin-top: 0;
 }
 
 h1 {
@@ -28,13 +38,6 @@ h1 {
   margin-bottom: 5px;
 }
 
-h1 .menu-title {
-  color: #FFbb15;
-  display: block;
-  margin-top: -33px;
-  letter-spacing: 0.5px;
-  font-size: 40px;
-}
 
 h2 {
   font-size: 30px;
@@ -67,11 +70,17 @@ p {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  flex-wrap: nowrap;
+  gap: 20px;
 }
 
 .menu-header h1 {
   flex: 1;
   margin: 0;
+  display: flex;
+  flex-direction: column; /* stack cafeteria + menu */
+  align-items: flex-start; /* left-align relative to logo */
+  line-height: 1.1;
 }
 
 .logo {
