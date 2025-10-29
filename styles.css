@@ -1,65 +1,51 @@
+/* ---------- BASE STYLING ---------- */
 body {
-  background-color: white;
+  background-color: #f8f8f8; /* light gray for contrast with white card */
   color: #13070c;
   font-family: 'Nunito', sans-serif;
   padding: 20px;
+  margin: 0;
 }
 
-h1 {
-  font-size: 40px;
-  margin-top: 0;
-  font-family: 'Lora', serif;
-  margin-bottom: 5px;
-  text-align: center;
-  font-weight: 800;
-  line-height: 1.05;
-}
-
-
-h1 .restaurant {
-  color: #29607b; /* first word */
-  display: block;
-  font-size: 40px;
-}
-
-h1 .menu-title {
-  color: #FFbb15;
-  display: block;
-  margin-top: -33px;  /* stacks tightly without touching */
-  letter-spacing: 0.5px; /* keeps letters readable */
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 30px;  
-}
-
-footer {
-  text-align: center;
-}
-
-p {
-  font-family: 'Nunito', sans-serif;
-}
+/* ---------- MENU CARD CONTAINER ---------- */
 .menu {
-  position: relative
+  background-color: white;
+  width: 85%;
+  max-width: 900px;
+  min-width: 350px;
+  margin: 40px auto; /* center horizontally with breathing room */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); /* subtle white card effect */
 }
 
-/* ---------- HEADER LAYOUT ---------- */
+/* ---------- HEADER ---------- */
 .menu-header {
   display: flex;
-  justify-content: space-between; /* logo left, text right */
-  align-items: center;            /* vertically center */
-  background: transparent;        /* keep white card visible */
-  text-align: right;              /* align text to right */
-  padding: 10px 20px;             /* neat spacing */
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Make the logo height-based (scales properly) */
+.menu-header h1 {
+  flex: 1;             /* take middle space evenly */
+  margin: 0;
+  text-align: center;
+  line-height: 1.1;
+  font-weight: 800;
+  font-family: 'Lora', serif;
+}
+
 .logo {
-  height: 80px;   /* base height */
-  width: auto;    /* auto-scale width */
-  flex-shrink: 0; /* prevent squishing */
+  max-width: 100px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    max-width: 60px;
+  }
 }
 
 /* CAFETERIA (blue) */
@@ -69,7 +55,6 @@ h1 .restaurant {
   font-size: 42px;
   line-height: 1;
   font-weight: 800;
-  font-family: 'Lora', serif;
 }
 
 /* MENU (yellow) */
@@ -77,44 +62,124 @@ h1 .menu-title {
   color: #ffbb15;
   display: block;
   font-size: 42px;
-  margin-top: -28px;  /* stack tighter */
-  font-family: 'Lora', serif;
+  margin-top: -28px; /* close stacking */
   font-weight: 800;
 }
 
-/* Responsiveness — shrink nicely on small screens */
+/* ---------- GRID LAYOUT ---------- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 24px;
+}
+
 @media (max-width: 600px) {
-  .menu-header {
-    flex-direction: row;
-    justify-content: space-between;
+  .menu-grid {
+    grid-template-columns: 1fr;
   }
 
-  .logo {
-    height: 60px;
-  }
-
-  h1 .restaurant,
-  h1 .menu-title {
-    font-size: 30px;
+  .menu-grid section {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
   }
 }
 
+/* ---------- CATEGORY TITLES ---------- */
+.menu-grid h2 {
+  text-align: left;
+  margin-bottom: 5px;
+  color: #29607b;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  font-weight: 700;
+}
 
+.menu-grid h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffbb15; /* yellow underline */
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+.menu-grid section {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #A4243B;
+  padding-bottom: 10px;
+}
+
+/* ---------- MENU ITEM STYLING ---------- */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+}
+
+.item p {
+  margin: 2px 0;
+}
+
+.flavor,
+.dessert,
+.appetizer,
+.main,
+.drink {
+  flex: 1;
+  text-align: left;
+  color: #2C2C2C;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.details {
+  font-size: 14px;
+  color: #666;
+  margin-top: -2px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* ---------- PRICE STYLING ---------- */
+.price {
+  flex: 0 0 60px;
+  text-align: right;
+  color: #265E9A;
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #265E9A;
+  line-height: 1.1;
+}
+
+/* ---------- JUICE SECTION ---------- */
 .sub-category {
-  color: #2C2C2C;    /* accent color */
-  font-size: 25px;   /* smaller than <h2> */
-  font-weight: 800;  /* bold */
+  color: #2C2C2C;
+  font-size: 25px;
+  font-weight: 800;
   margin: 12px 0 6px 0;
 }
-/* Juice items */
+
 .juice-option {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 40px;  /* clear indent for the whole row */
+  margin-left: 40px;
 }
 
-/* Name of juice */
 .juice-option .dessert {
   font-size: 20px;
   font-weight: 800;
@@ -122,87 +187,32 @@ h1 .menu-title {
   margin: 0;
 }
 
-/* Price aligned far right */
 .juice-option .price {
   margin: 0;
-  padding-left: 60px;   /* add extra spacing between name and price */
+  padding-left: 60px;
   text-align: right;
-  min-width: 70px;      /* ensures consistent right alignment */
+  min-width: 70px;
 }
 
-
-.bottom-line {
-  margin-top: 25px;
-}
-
-/* ----- MENU ITEM STYLING ----- */
-.item {
-  display: flex;
-  justify-content: space-between; /* pushes flavor left, price right */
-  align-items: flex-start;
-  gap: 12px;
-  margin: 0; /* reset margins */
-}
-.item .price {
-  align-self: flex-end;  /* pushes price to bottom of its row */
-}
-/* Make only the Dawa item align its price to the bottom */
-.item.dawa {
-  align-items: flex-start;
-}
-
-.item.dawa .price {
-  align-self: flex-end;
-}
-
-
-.item p {
-  margin: 2px 0; /* reduce vertical spacing between items */
-}
-
-.flavor, .dessert, .appetizer, .main, .drink {
-  flex: 1;
-  text-align: left;
-  color: #2C2C2C;        /* white dish names */
-  font-size: 20px;     /* bigger font */
-  font-weight: 800;
-}
-
-/* Keeps the name + subtext aligned on the left */
-.flavor-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Subtle ingredient note under the item name */
-.details {
-  font-size: 14px;
-  color: #6b6b6b;       /* soft gray text */
-  margin-top: -2px;     /* pull it a bit closer to the main name */
-  font-weight: 500;
-  font-family: 'Nunito', sans-serif;
-}
-/* ----- Dawa section styling ----- */
+/* ---------- DAWA SECTION ---------- */
 .dawa-types {
   list-style: none;
   margin: 0;
-  padding-left: 18px; /* slight indent under 'Dawa' */
+  padding-left: 18px;
 }
 
 .dawa-types li {
-  font-size: 16px;        /* smaller than main item text */
-  font-weight: 700;       /* still bold */
-  color: #2C2C2C;         /* same color as other item names */
+  font-size: 16px;
+  font-weight: 700;
+  color: #2C2C2C;
   line-height: 1.2;
   margin: 0;
 }
 
-/* Dawa subtypes under main drink name */
 .details-list {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 10px; /* small indent under 'Dawa' */
+  padding: 0 0 0 10px;
   color: #666;
   font-size: 14px;
   line-height: 1.2;
@@ -213,86 +223,10 @@ h1 .menu-title {
   margin: 0;
 }
 
-
-.flavor-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;              /* ensures it stays on the left side */
-}
-
-/* keep the subtle description neat */
-.details {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-  line-height: 1.2;
-  font-weight: 500;
-}
-
-.price {
-  flex: 0 0 60px;
-  text-align: right;
-  color: #265E9A; /* keep accent color for prices */
-  font-size: 20px;
-  font-weight: 1000;
-}
-
-
-.price-list {
-  text-align: right;
-  font-size: 14px;   /* slightly smaller */
-  color: #265E9A;
-  font-weight: 600;
-}
-
-.price-list {
-  display: flex;
-  flex-direction: column; /* always stacked */
-  align-items: flex-end;  /* keep right aligned */
-  gap: 0px;              /* small space between Small & Large */
-  font-size: 18px;
-  font-weight: 700;
-  color: #265E9A;
-  line-height: 1.1;
-}
-.price-list span {
-  margin: 0;
-  padding: 0;   /* little space between Small and Large */
-}
-
-/* ----- CATEGORY STYLING ----- */
-.menu-grid h2 {
-  text-align: left;
-  margin-bottom: 5px;
-  color: #29607b; /* category color */
-  position: relative;
-  display: inline-block;
-  padding-bottom: 4px;
-  font-weight: 700;
-}
-
-.menu-grid section {
-  margin-bottom: 20px;   /* space between category blocks */
-  border-bottom: 2px solid #A4243B; /* subtle line between categories */
-  padding-bottom: 10px;
-}
-
-.menu-grid h2::after {
-content: "";
-display: block;
-width: 100%;
-height: 3px;
-background-color: #ffbb15; /* orange underline */
-margin-top: 4px;
-border-radius: 2px;
-}
-
-/* ---------- PRINT VERSION ---------- */
+/* ---------- PRINT STYLING ---------- */
 @media print {
-  /* Page setup */
   @page {
-    size: A3 portrait;   /* Use A3 (or change to A2/A1/landscape if needed) */
+    size: A3 portrait;
     margin: 1cm;
   }
 
@@ -301,35 +235,29 @@ border-radius: 2px;
     color: #000;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    font-size: 90%; /* Slightly smaller text to fit better */
+    font-size: 90%;
   }
 
-  /* Menu container adjustments */
   .menu {
     width: 100%;
-    max-width: none;
     box-shadow: none;
     padding: 10px;
     margin: 0;
   }
 
-  /* Keep two columns for print */
   .menu-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* two equal columns */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     page-break-inside: avoid;
   }
 
-  /* Keep each section together */
   .menu-grid section {
     break-inside: avoid;
     page-break-inside: avoid;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #A4243B; /* light divider for print */
+    border-bottom: 1px solid #A4243B;
   }
 
-  /* Adjust headings and spacing */
   h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -339,47 +267,26 @@ border-radius: 2px;
     font-size: 24px;
     margin-top: 10px;
     color: #2358ba !important;
-    background: transparent !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
   }
 
-  /* ✅ Yellow underline for section titles */
   .menu-grid h2::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    background: #FFC845 !important; /* ensure yellow prints */
-    margin-top: 4px;
-    border-radius: 2px;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    background: #FFC845 !important;
   }
 
-  /* Smaller adjustments for items and prices */
   .price {
     font-size: 18px;
   }
 
-  .item {
-    gap: 8px;
-  }
-
-  /* Keep logos visible for branding */
   .logo {
-    display: block !important;
-    max-width: 80px;  /* slightly smaller for print */
-    height: auto;
+    max-width: 80px;
   }
-  
 
-  /* Hide only links and buttons (not logo) */
   a, button {
     display: none !important;
   }
 }
-/* keep header + grid together as a single block */
+
+/* ---------- PREVENT PAGE BREAKS ---------- */
 .menu-wrapper,
 .menu,
 .menu-header,
@@ -388,22 +295,4 @@ border-radius: 2px;
   break-inside: avoid;
   page-break-after: avoid;
   break-after: avoid;
-}
-
-/* reduce header size a bit for printing to help fit everything */
-.menu-header h1 {
-  font-size: 28px;
-  margin-bottom: 6px;
-}
-.menu-header .logo {
-  max-width: 60px; /* smaller logo for print */
-}
-@media print {
-  h1 {
-    line-height: 1.2; /* prevent overlapping */
-  }
-  h1 .menu-title {
-  margin-top: -26px;  /* gentle lift for print */
-  line-height: 1.0;
-}
 }
