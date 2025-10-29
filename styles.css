@@ -66,32 +66,64 @@ p {
 /* ---------- HEADER ---------- */
 .menu-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  flex-wrap: nowrap;
-  gap: 20px;
-}
-
-.menu-header h1 {
-  flex: 1;
-  margin: 0;
-  display: flex;
-  flex-direction: column; /* stack cafeteria + menu */
-  align-items: flex-start; /* left-align relative to logo */
-  line-height: 1.1;
+  justify-content: flex-start; /* logo left, text right */
+  align-items: center;          /* vertical centering */
+  background-color: white;
+  padding: 16px 48px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 24px;                    /* spacing between logo and text */
+  border-radius: 12px;          /* slight card effect */
 }
 
 .logo {
-  max-width: 80px;
-  height: auto;
+  height: 120px;   /* scales based on height */
+  width: auto;     /* maintain proportions */
 }
 
+.title-block {
+  display: flex;
+  flex-direction: column; /* stack text vertically */
+  align-items: flex-end;  /* push text to the right */
+  justify-content: center;
+  line-height: 1.05;
+  text-align: right;
+}
+
+.title-block .restaurant {
+  color: #29607b;  /* blue text */
+  font-size: 40px;
+  font-family: 'Lora', serif;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.title-block .menu-title {
+  color: #ffbb15;  /* yellow text */
+  font-size: 40px;
+  font-family: 'Lora', serif;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* Optional: responsive fix for mobile */
 @media (max-width: 600px) {
+  .menu-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title-block {
+    align-items: center;
+    text-align: center;
+  }
+
   .logo {
-    max-width: 55px;
+    height: auto;
+    max-width: 120px; /* scales proportionally instead of fixed height */
   }
 }
+
 
 /* ---------- GRID ---------- */
 .menu-grid {
