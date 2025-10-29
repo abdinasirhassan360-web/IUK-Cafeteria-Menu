@@ -9,21 +9,17 @@ h1 {
   font-size: 40px;
   margin-top: 0;
   font-family: 'Lora', serif;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-align: center;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.05;
 }
+
 
 h1 .restaurant {
   color: #29607b; /* first word */
   display: block;
   font-size: 40px;
-}
-
-h1 {
-  line-height: 1.05; /* keeps title compact */
-  margin-bottom: 5px; /* small gap below header */
 }
 
 h1 .menu-title {
@@ -33,7 +29,6 @@ h1 .menu-title {
   letter-spacing: 0.5px; /* keeps letters readable */
   font-size: 40px;
 }
-
 
 h2 {
   font-size: 30px;  
@@ -50,58 +45,60 @@ p {
   position: relative
 }
 
+/* ---------- HEADER LAYOUT ---------- */
 .menu-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between; /* logo left, text right */
+  align-items: center;            /* vertically center */
+  background: transparent;        /* keep white card visible */
+  text-align: right;              /* align text to right */
+  padding: 10px 20px;             /* neat spacing */
 }
 
-.menu-header h1 {
-  flex: 1;             /* take up available middle space */
-  margin: 0;           /* remove weird spacing */
-}
-
+/* Make the logo height-based (scales properly) */
 .logo {
-  max-width: 80px; /* desktop size */
-  height: auto;
+  height: 80px;   /* base height */
+  width: auto;    /* auto-scale width */
+  flex-shrink: 0; /* prevent squishing */
 }
 
-/* On phones, shrink logos so they don't block header */
+/* CAFETERIA (blue) */
+h1 .restaurant {
+  color: #29607b;
+  display: block;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 800;
+  font-family: 'Lora', serif;
+}
+
+/* MENU (yellow) */
+h1 .menu-title {
+  color: #ffbb15;
+  display: block;
+  font-size: 42px;
+  margin-top: -28px;  /* stack tighter */
+  font-family: 'Lora', serif;
+  font-weight: 800;
+}
+
+/* Responsiveness — shrink nicely on small screens */
 @media (max-width: 600px) {
+  .menu-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .logo {
-    max-width: 55px;  /* smaller size on mobile */
+    height: 60px;
+  }
+
+  h1 .restaurant,
+  h1 .menu-title {
+    font-size: 30px;
   }
 }
 
-.menu {
-  width: 80%;         
-  max-width: 650px;   
-  min-width: 350px;
-  background-color: white;
-  margin: 0 auto;
-  padding: 20px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* two equal columns */
-  gap: 20px;                      /* space between columns */
-}
-
-/* responsive: collapse to 1 column on phones */
-@media (max-width: 600px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-grid section {
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-  }
-}
 
 .sub-category {
   color: #2C2C2C;    /* accent color */
