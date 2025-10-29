@@ -1,28 +1,29 @@
 /* --- Page background so the white card shows --- */
 body {
-  background-color: #f5f5f5;  /* Light gray background instead of white */
+  background-color: #f5f5f5;
   color: #13070c;
   font-family: 'Nunito', sans-serif;
   padding: 20px;
 }
 
-/* ...existing code... */
-
-/* visible card when page is white */
 .menu {
   width: 80%;
   max-width: 650px;
   min-width: 350px;
-  background-color: #ffffff;
+  background-color: #ffffff;  /* explicitly white background */
   margin: 24px auto;
   padding: 20px;
   border-radius: 12px;
-  border: 1px solid #e8eaee;   /* subtle border to separate from white bg */
+  border: 1px solid #e8eaee;
   box-shadow: 0 10px 30px rgba(18, 35, 50, 0.08);
   overflow: hidden;
   position: relative;
 }
 
+/* Make sure menu sections are also white */
+.menu-grid section {
+  background-color: #ffffff;
+}
 h1 {
   font-size: 40px;
   margin-top: 0;
