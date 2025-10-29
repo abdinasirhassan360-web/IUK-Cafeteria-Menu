@@ -1,48 +1,25 @@
-/* --- Page background so the white card shows --- */
 body {
-  background-color: #f5f5f5;
+  background-color: white;
   color: #13070c;
   font-family: 'Nunito', sans-serif;
   padding: 20px;
 }
 
-.menu {
-  width: 80%;
-  max-width: 650px;
-  min-width: 350px;
-  background-color: #ffffff;  /* explicitly white background */
-  margin: 24px auto;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #e8eaee;
-  box-shadow: 0 10px 30px rgba(18, 35, 50, 0.08);
-  overflow: hidden;
-  position: relative;
-}
-
-/* Make sure menu sections are also white */
-.menu-grid section {
-  background-color: #ffffff;
-}
 h1 {
   font-size: 40px;
   margin-top: 0;
   font-family: 'Lora', serif;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-align: center;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.05;
 }
+
 
 h1 .restaurant {
   color: #29607b; /* first word */
   display: block;
   font-size: 40px;
-}
-
-h1 {
-  line-height: 1.05; /* keeps title compact */
-  margin-bottom: 5px; /* small gap below header */
 }
 
 h1 .menu-title {
@@ -52,7 +29,6 @@ h1 .menu-title {
   letter-spacing: 0.5px; /* keeps letters readable */
   font-size: 40px;
 }
-
 
 h2 {
   font-size: 30px;  
@@ -69,98 +45,60 @@ p {
   position: relative
 }
 
-/* ===== HEADER CONTAINER ===== */
+/* ---------- HEADER LAYOUT ---------- */
 .menu-header {
   display: flex;
-  justify-content: space-between;  /* logo left, text right */
-  align-items: center;             /* vertical centering */
-  background: transparent;         /* let the .menu white box show */
-  padding: 16px 32px;              /* inner spacing */
-  margin-bottom: 20px;
-  flex-wrap: nowrap;
-  gap: 24px;                       /* space between logo and text */
-  box-shadow: none;                /* only the .menu card has shadow */
+  justify-content: space-between; /* logo left, text right */
+  align-items: center;            /* vertically center */
+  background: transparent;        /* keep white card visible */
+  text-align: right;              /* align text to right */
+  padding: 10px 20px;             /* neat spacing */
 }
 
-/* ===== LOGO IMAGE ===== */
-.menu-header .logo {
-  height: 110px;        /* big enough to match text height */
-  width: auto;          /* keeps aspect ratio */
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.menu-title-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* align “CAFETERIA MENU” to the right */
-  text-align: right;
-  line-height: 1.05;
-  flex: 1;
+/* Make the logo height-based (scales properly) */
+.logo {
+  height: 80px;   /* base height */
+  width: auto;    /* auto-scale width */
+  flex-shrink: 0; /* prevent squishing */
 }
 
 /* CAFETERIA (blue) */
-.menu-title-block .cafeteria {
+h1 .restaurant {
   color: #29607b;
-  font-size: clamp(28px, 4vw, 40px); /* responsive scaling */
+  display: block;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 800;
   font-family: 'Lora', serif;
-  font-weight: 700;
-  margin: 0;
 }
 
 /* MENU (yellow) */
-.menu-title-block .menu-sub {
+h1 .menu-title {
   color: #ffbb15;
-  font-size: clamp(28px, 4vw, 40px);
+  display: block;
+  font-size: 42px;
+  margin-top: -28px;  /* stack tighter */
   font-family: 'Lora', serif;
   font-weight: 800;
-  margin: -6px 0 0 0;  /* slight upward pull for tight stacking */
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
-@media (max-width: 700px) {
-  .menu-header {
-    flex-direction: column;       /* stack logo above text */
-    align-items: center;
-    text-align: center;
-    padding: 12px 24px;
-  }
-
-  .menu-header .logo {
-    height: 10vh;                 /* slightly smaller on mobile */
-    max-height: 70px;
-    margin-bottom: 8px;
-  }
-
-  .menu-title-block {
-    text-align: center;
-  }
-
-  .menu-title-block .cafeteria,
-  .menu-title-block .menu-sub {
-    font-size: clamp(22px, 5vw, 30px);
-  }
-}
-/* ===== MENU CONTAINER ===== */
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* two equal columns */
-  gap: 20px;                      /* space between columns */
-}
-
-/* responsive: collapse to 1 column on phones */
+/* Responsiveness — shrink nicely on small screens */
 @media (max-width: 600px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
+  .menu-header {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  .menu-grid section {
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
+  .logo {
+    height: 60px;
+  }
+
+  h1 .restaurant,
+  h1 .menu-title {
+    font-size: 30px;
   }
 }
+
 
 .sub-category {
   color: #2C2C2C;    /* accent color */
