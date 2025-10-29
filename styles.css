@@ -1,22 +1,23 @@
 /* --- Page background so the white card shows --- */
 body {
-  background-color: #f4f6f8;   /* light gray page background */
+  background-color: #ffffff;
   color: #13070c;
   font-family: 'Nunito', sans-serif;
   padding: 20px;
 }
 
-/* --- Menu card (visible white card with shadow) --- */
+/* visible card when page is white */
 .menu {
   width: 80%;
   max-width: 650px;
   min-width: 350px;
-  background-color: #ffffff;    /* white card */
-  margin: 24px auto;            /* centered with spacing from top */
+  background-color: #ffffff;
+  margin: 24px auto;
   padding: 20px;
-  border-radius: 12px;          /* rounded corners */
-  box-shadow: 0 10px 30px rgba(18, 35, 50, 0.12); /* stronger, softer shadow */
-  overflow: hidden;             /* keeps header + grid inside rounded corners */
+  border-radius: 12px;
+  border: 1px solid #e8eaee;   /* subtle border to separate from white bg */
+  box-shadow: 0 10px 30px rgba(18, 35, 50, 0.08);
+  overflow: hidden;
   position: relative;
 }
 
