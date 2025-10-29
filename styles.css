@@ -1,10 +1,12 @@
 /* --- Page background so the white card shows --- */
 body {
-  background-color: #ffffff;
+  background-color: #f5f5f5;  /* Light gray background instead of white */
   color: #13070c;
   font-family: 'Nunito', sans-serif;
   padding: 20px;
 }
+
+/* ...existing code... */
 
 /* visible card when page is white */
 .menu {
