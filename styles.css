@@ -46,23 +46,21 @@ h1 {
 }
 
 /* ---------- HEADER ---------- */
-/* header stays inside .menu; no negative margins so it can't overflow */
 .menu-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;        /* vertically center logos and heading */
+  align-items: center;
   padding: 12px 12px;
   gap: 12px;
-  background-color: transparent; /* match card background */
+  background-color: transparent;
   margin: 0 0 16px 0;
   box-sizing: border-box;
   border-radius: 8px 8px 0 0;
 }
 
-/* keep the (empty) h1 compact so it doesn't drive header height */
 .menu-header h1 {
   flex: 1 1 auto;
-  min-width: 0;               /* allow the flex child to shrink on small screens */
+  min-width: 0;
   margin: 0;
   padding: 0;
   display: block;
@@ -70,10 +68,10 @@ h1 {
   line-height: 1;
 }
 
-/* Constrain logos so they cannot push the header wider or overflow */
+/* ---------- LOGOS ---------- */
 .logo {
-  max-height: 72px;           /* cap height */
-  max-width: 28%;             /* cap width relative to header to avoid overflow on phones */
+  max-height: 72px;
+  max-width: 28%;
   width: auto;
   height: auto;
   flex: 0 0 auto;
@@ -81,7 +79,6 @@ h1 {
   display: block;
 }
 
-/* optional, small spacing helpers for left / right logos */
 .logo.left-logo { margin-left: 0; }
 .logo.right-logo { margin-right: 0; }
 
@@ -153,7 +150,7 @@ h1 {
   color: #2C2C2C;
   font-size: 20px;
   font-weight: 800;
-  min-width: 0; /* allow truncation / wrapping on small screens */
+  min-width: 0;
 }
 
 .flavor-block {
@@ -212,14 +209,14 @@ h1 {
   margin: 0;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 900px) {
-  .menu-grid {
-    grid-template-columns: 1fr; /* collapse to single column on smaller screens */
-  }
-}
+/* ---------- RESPONSIVE (portrait = 1 col, phone-landscape = 2 cols) ---------- */
 
-@media (max-width: 600px) {
+/* Phone and small screens (portrait / narrow) -> single column */
+@media (max-width: 700px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
   .menu {
     width: 92%;
     padding: 16px;
@@ -248,270 +245,27 @@ h1 {
   }
 }
 
-/* small helper: ensure long text doesn't push layout */
-.menu-header h1,
-.flavor,
-.dessert,
-.appetizer,
-.main,
-.drink {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-/* end of stylesheet */
-```/* filepath: c:\Users\ELITEBOOK\Desktop\Restuarant Menu Iuk Cafeteria\styles.css */
-/* ---------- BASE STYLING ---------- */
-body {
-  background-color: #f5f5f5;
-  color: #13070c;
-  font-family: 'Nunito', sans-serif;
-  padding: 20px;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* hide any h1 sub-elements if present (you removed the text) */
-h1 .restaurant,
-h1 .menu-title {
-  display: none;
-}
-
-/* keep a sane h1 fallback if needed */
-h1 {
-  font-family: 'Lora', serif;
-  font-weight: 800;
-  margin: 0;
-  line-height: 1.05;
-  font-size: 40px;
-  text-align: center;
-}
-
-/* ---------- MENU CONTAINER ---------- */
-.menu {
-  width: 80%;
-  max-width: 650px;
-  min-width: 320px;
-  background-color: #fff;
-  margin: 24px auto;
-  padding: 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  border-radius: 12px;
-  box-sizing: border-box;
-  overflow: visible;
-}
-
-/* wrapper (keeps header + grid grouped) */
-.menu-wrapper {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* ---------- HEADER ---------- */
-/* header stays inside .menu; no negative margins so it can't overflow */
-.menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;        /* vertically center logos and heading */
-  padding: 12px 12px;
-  gap: 12px;
-  background-color: transparent; /* match card background */
-  margin: 0 0 16px 0;
-  box-sizing: border-box;
-  border-radius: 8px 8px 0 0;
-}
-
-/* keep the (empty) h1 compact so it doesn't drive header height */
-.menu-header h1 {
-  flex: 1 1 auto;
-  min-width: 0;               /* allow the flex child to shrink on small screens */
-  margin: 0;
-  padding: 0;
-  display: block;
-  height: auto;
-  line-height: 1;
-}
-
-/* Constrain logos so they cannot push the header wider or overflow */
-.logo {
-  max-height: 72px;           /* cap height */
-  max-width: 28%;             /* cap width relative to header to avoid overflow on phones */
-  width: auto;
-  height: auto;
-  flex: 0 0 auto;
-  object-fit: contain;
-  display: block;
-}
-
-/* optional, small spacing helpers for left / right logos */
-.logo.left-logo { margin-left: 0; }
-.logo.right-logo { margin-right: 0; }
-
-/* ---------- GRID LAYOUT ---------- */
-.menu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* desktop: two equal columns */
-  gap: 20px;
-  box-sizing: border-box;
-}
-
-/* keep each category visually separated */
-.menu-grid section {
-  margin-bottom: 20px;
-  border-bottom: 2px solid #A4243B;
-  padding-bottom: 10px;
-}
-
-/* ---------- HEADINGS ---------- */
-.menu-grid h2 {
-  text-align: left;
-  margin-bottom: 6px;
-  color: #29607b;
-  display: inline-block;
-  padding-bottom: 4px;
-  font-weight: 700;
-  font-size: 30px;
-  position: relative;
-}
-
-.menu-grid h2::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #ffbb15;
-  margin-top: 4px;
-  border-radius: 2px;
-}
-
-/* sub-category */
-.sub-category {
-  color: #2C2C2C;
-  font-size: 25px;
-  font-weight: 800;
-  margin: 12px 0 6px 0;
-}
-
-/* ---------- MENU ITEMS ---------- */
-.item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-  margin: 0;
-}
-
-.item p {
-  margin: 2px 0;
-}
-
-.flavor,
-.dessert,
-.appetizer,
-.main,
-.drink {
-  flex: 1 1 auto;
-  text-align: left;
-  color: #2C2C2C;
-  font-size: 20px;
-  font-weight: 800;
-  min-width: 0; /* allow truncation / wrapping on small screens */
-}
-
-.flavor-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1 1 auto;
-}
-
-.details {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-  line-height: 1.2;
-  font-weight: 500;
-  font-family: 'Nunito', sans-serif;
-}
-
-.price {
-  flex: 0 0 60px;
-  text-align: right;
-  color: #265E9A;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-/* ---------- PRICE LISTS ---------- */
-.price-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0;
-  font-size: 18px;
-  font-weight: 700;
-  color: #265E9A;
-  line-height: 1.1;
-}
-
-.price-list span {
-  margin: 0;
-  padding: 0;
-}
-
-/* ---------- DAWA SECTION ---------- */
-.dawa-types {
-  list-style: none;
-  margin: 0;
-  padding-left: 18px;
-}
-
-.dawa-types li {
-  font-size: 16px;
-  font-weight: 700;
-  color: #2C2C2C;
-  line-height: 1.2;
-  margin: 0;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 900px) {
+/* Phone in landscape orientation: keep two columns */
+@media (max-width: 900px) and (orientation: landscape) {
   .menu-grid {
-    grid-template-columns: 1fr; /* collapse to single column on smaller screens */
-  }
-}
-
-@media (max-width: 600px) {
-  .menu {
-    width: 92%;
-    padding: 16px;
-    min-width: 0;
-  }
-
-  .menu-header {
-    padding: 10px 8px;
-    gap: 8px;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
 
   .logo {
-    max-height: 56px;
-    max-width: 30%;
+    max-height: 64px;
+    max-width: 22%;
   }
 
-  .price {
-    font-size: 18px;
-    flex: 0 0 56px;
-  }
-
-  .menu-grid section {
-    background: #fff;
-    padding: 10px;
-    border-radius: 8px;
+  .menu {
+    width: 94%;
+    padding: 18px;
   }
 }
 
-/* small helper: ensure long text doesn't push layout */
+/* larger tablets and desktops remain two columns */
+
+/* ---------- SMALL HELPER ---------- */
 .menu-header h1,
 .flavor,
 .dessert,
