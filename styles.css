@@ -1,10 +1,6 @@
 /* ---------- BASE STYLING ---------- */
 body {
-  background-image: url("background-hero-image.png");
-  background-size: cover;         /* fills the entire viewport */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f5f5f5;      /* fallback if image doesn’t load */
+  background-color: #f5f5f5; /* neutral outer background */
   color: #13070c;
   font-family: 'Nunito', sans-serif;
   padding: 20px;
@@ -12,6 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 /* hide any h1 sub-elements if present (you removed the text) */
 h1 .restaurant,
 h1 .menu-title {
@@ -30,7 +27,11 @@ h1 {
 
 /* ---------- MENU CONTAINER ---------- */
 .menu {
-  background-color: #ffffff;      /* solid white for clarity */
+  background-image: url("background-hero-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.95); /* subtle overlay for readability */
   margin: 0 auto;
   width: 90%;
   max-width: 750px;
