@@ -216,7 +216,7 @@ h1 {
 /* ---------- RESPONSIVE (phones) ---------- */
 @media (max-width: 700px) {
   .menu {
-    width: 92%;            /* restore original mobile width */
+    width: 98%;            /* restore original mobile width */
     max-width: none;
     padding: 16px;
     min-width: 0;
