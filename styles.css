@@ -80,11 +80,11 @@ h1 {
 }
 
 .menu-header img.left-logo {
-  margin-left: -10px; /* pull toward left edge */
+  margin-left: 0; /* pull toward left edge */
 }
 
 .menu-header img.right-logo {
-  margin-right: -10px; /* pull toward right edge */
+  margin-right: 0; /* pull toward right edge */
 }
 
 /* ---------- GRID LAYOUT ---------- */
@@ -237,11 +237,11 @@ h1 {
   }
 
   .menu-header img.left-logo {
-    margin-left: -6px;
+    margin-left: -4px;
   }
 
   .menu-header img.right-logo {
-    margin-right: -6px;
+    margin-right: -4px;
   }
 
   .price {
@@ -269,7 +269,7 @@ h1 {
   }
 
   .menu {
-    width: 94%;
+    width: 92%;
     padding: 18px;
   }
 }
