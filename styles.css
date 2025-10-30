@@ -63,14 +63,14 @@ p {
 }
 
 .logo {
-  max-width: 80px; /* desktop size */
+  max-width: 160px; /* desktop size */
   height: auto;
 }
 
 /* On phones, shrink logos so they don't block header */
 @media (max-width: 600px) {
   .logo {
-    max-width: 55px;  /* smaller size on mobile */
+    max-width: 110px;  /* smaller size on mobile */
   }
 }
 
