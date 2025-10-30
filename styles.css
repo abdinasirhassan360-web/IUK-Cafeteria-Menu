@@ -16,8 +16,6 @@ h1 {
   line-height: 1.1;
 }
 
-<<<<<<< HEAD
-=======
 h1 .restaurant {
   color: #ffffff; /* first word */
   display: block;
@@ -38,7 +36,6 @@ h1 .menu-title {
 }
 
 
->>>>>>> fix/header-layout
 h2 {
   font-size: 30px;
 }
@@ -65,16 +62,25 @@ p {
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
+/* ---------- MENU GRID (desktop + responsive) ---------- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns on desktop */
+  gap: 20px;
+}
 
-/* ...existing code... */
+/* collapse to single column on smaller screens */
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ---------- HEADER (FINAL FIXED VERSION) ---------- */
 .menu-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-=======
   text-align: center;
 }
 
@@ -99,7 +105,6 @@ p {
   width: 80%;         
   max-width: 650px;   
   min-width: 350px;
->>>>>>> fix/header-layout
   background-color: white;
   padding: 12px 24px;        /* keep some inner padding but stay inside .menu */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -359,13 +364,9 @@ p {
   }
 
   .logo {
-<<<<<<< HEAD
-    max-width: 80px;
-=======
     display: block !important;
     max-width: 200px;  /* slightly smaller for print */
     height: auto;
->>>>>>> fix/header-layout
   }
 
   a, button {
@@ -383,8 +384,6 @@ p {
   page-break-after: avoid;
   break-after: avoid;
 }
-<<<<<<< HEAD
-=======
 
 /* reduce header size a bit for printing to help fit everything */
 .menu-header h1 {
@@ -403,4 +402,3 @@ p {
   line-height: 1.0;
 }
 }
->>>>>>> fix/header-layout
