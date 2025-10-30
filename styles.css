@@ -27,6 +27,7 @@ h1 {
 
 /* ---------- MENU CONTAINER ---------- */
 .menu {
+  margin-top: 0;
   width: 80%;
   max-width: 650px;
   min-width: 350px;
