@@ -11,7 +11,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+}
 /* hide any h1 sub-elements if present (you removed the text) */
 h1 .restaurant,
 h1 .menu-title {
