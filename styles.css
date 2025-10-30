@@ -37,6 +37,7 @@ h1 {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* deeper directional shadow */
   border-radius: 0; /* remove rounded corners */
   position: relative; /* allows shadows to render properly */
+  box-sizing: border-box;
 }
 
 /* wrapper (keeps header + grid grouped) */
@@ -50,12 +51,10 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 12px;
-  gap: 12px;
-  background-color: transparent;
+  padding: 0; /* remove internal gap so logos line up with .menu padding */
   margin: 0 0 16px 0;
+  background-color: transparent;
   box-sizing: border-box;
-  border-radius: 8px 8px 0 0;
 }
 
 .menu-header h1 {
@@ -66,6 +65,7 @@ h1 {
   display: block;
   height: auto;
   line-height: 1;
+  text-align: center;
 }
 
 /* ---------- LOGOS ---------- */
@@ -79,13 +79,22 @@ h1 {
   display: block;
 }
 
-/* push logos closer to edges */
+/* logos now align exactly with text edges */
 .logo.left-logo {
-  margin-left: -10px;   /* pushes left logo closer to left edge */
+  margin-left: 0;
 }
 
 .logo.right-logo {
-  margin-right: -10px;  /* pushes right logo closer to right edge */
+  margin-right: 0;
+}
+
+/* Add equal internal spacing so both edges match .menu padding */
+.menu-header > .left-logo {
+  margin-left: 0; /* no extra gap */
+}
+
+.menu-header > .right-logo {
+  margin-right: 0;
 }
 
 /* ---------- GRID LAYOUT ---------- */
@@ -230,7 +239,7 @@ h1 {
   }
 
   .menu-header {
-    padding: 10px 8px;
+    padding: 0;
     gap: 8px;
   }
 
@@ -239,13 +248,13 @@ h1 {
     max-width: 30%;
   }
 
-  /* keep logos close to edges on mobile too */
-  .logo.left-logo {
-    margin-left: -6px;
+  /* logos align with text edges on mobile too */
+  .menu-header > .left-logo {
+    margin-left: 0;
   }
 
-  .logo.right-logo {
-    margin-right: -6px;
+  .menu-header > .right-logo {
+    margin-right: 0;
   }
 
   .price {
@@ -272,18 +281,13 @@ h1 {
     max-width: 22%;
   }
 
-  /* maintain tight edge alignment */
-  .logo.left-logo {
-    margin-left: -8px;
-  }
-
-  .logo.right-logo {
-    margin-right: -8px;
-  }
-
   .menu {
     width: 94%;
     padding: 18px;
+  }
+
+  .menu-header {
+    padding: 0;
   }
 }
 
