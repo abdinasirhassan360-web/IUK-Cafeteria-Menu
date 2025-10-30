@@ -28,8 +28,8 @@ h1 {
 /* ---------- MENU CONTAINER ---------- */
 .menu {
   margin-top: 0;
-  width: 90%;               /* restore fuller width */
-  max-width: 750px;         /* allow slightly larger desktop size */
+  width: 90%;               /* wide on desktop */
+  max-width: 750px;         /* cap width */
   min-width: 350px;
   background-color: white;
   margin: 0 auto;
@@ -40,8 +40,7 @@ h1 {
   box-sizing: border-box;
 }
 
-
-/* wrapper (keeps header + grid grouped) */
+/* ---------- WRAPPER ---------- */
 .menu-wrapper {
   width: 100%;
   box-sizing: border-box;
@@ -52,7 +51,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0; /* remove internal gap so logos line up with .menu padding */
+  padding: 0;
   margin: 0 0 16px 0;
   background-color: transparent;
   box-sizing: border-box;
@@ -80,33 +79,22 @@ h1 {
   display: block;
 }
 
-/* logos now align exactly with text edges */
-.logo.left-logo {
-  margin-left: 0;
+.menu-header img.left-logo {
+  margin-left: -10px; /* pull toward left edge */
 }
 
-.logo.right-logo {
-  margin-right: 0;
-}
-
-/* Add equal internal spacing so both edges match .menu padding */
-.menu-header > .left-logo {
-  margin-left: 0; /* no extra gap */
-}
-
-.menu-header > .right-logo {
-  margin-right: 0;
+.menu-header img.right-logo {
+  margin-right: -10px; /* pull toward right edge */
 }
 
 /* ---------- GRID LAYOUT ---------- */
 .menu-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* desktop: two equal columns */
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   box-sizing: border-box;
 }
 
-/* keep each category visually separated */
 .menu-grid section {
   margin-bottom: 20px;
   border-bottom: 2px solid #A4243B;
@@ -135,7 +123,7 @@ h1 {
   border-radius: 2px;
 }
 
-/* sub-category */
+/* ---------- SUBCATEGORY ---------- */
 .sub-category {
   color: #2C2C2C;
   font-size: 25px;
@@ -225,22 +213,21 @@ h1 {
   margin: 0;
 }
 
-/* ---------- RESPONSIVE (portrait = 1 col, phone-landscape = 2 cols) ---------- */
-
-/* Phone and small screens (portrait / narrow) -> single column */
+/* ---------- RESPONSIVE (phones) ---------- */
 @media (max-width: 700px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
   .menu {
-    width: 92%;
+    width: 92%;            /* restore original mobile width */
+    max-width: none;
     padding: 16px;
     min-width: 0;
   }
 
+  .menu-grid {
+    grid-template-columns: 1fr; /* single column */
+  }
+
   .menu-header {
-    padding: 0;
+    padding: 10px 8px;
     gap: 8px;
   }
 
@@ -249,13 +236,12 @@ h1 {
     max-width: 30%;
   }
 
-  /* logos align with text edges on mobile too */
-  .menu-header > .left-logo {
-    margin-left: 0;
+  .menu-header img.left-logo {
+    margin-left: -6px;
   }
 
-  .menu-header > .right-logo {
-    margin-right: 0;
+  .menu-header img.right-logo {
+    margin-right: -6px;
   }
 
   .price {
@@ -270,7 +256,7 @@ h1 {
   }
 }
 
-/* Phone in landscape orientation: keep two columns */
+/* ---------- LANDSCAPE PHONES ---------- */
 @media (max-width: 900px) and (orientation: landscape) {
   .menu-grid {
     grid-template-columns: 1fr 1fr;
@@ -285,10 +271,6 @@ h1 {
   .menu {
     width: 94%;
     padding: 18px;
-  }
-
-  .menu-header {
-    padding: 0;
   }
 }
 
