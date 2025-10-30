@@ -29,15 +29,15 @@ h1 {
 .menu {
   width: 80%;
   max-width: 650px;
-  min-width: 320px;
-  background-color: #fff;
-  margin: 24px auto;
+  min-width: 350px;
+  background-color: white;
+  margin: 0 auto;
   padding: 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  border-radius: 0;
-  box-sizing: border-box;
-  overflow: visible;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* deeper directional shadow */
+  border-radius: 0; /* remove rounded corners */
+  position: relative; /* allows shadows to render properly */
 }
+
 
 /* wrapper (keeps header + grid grouped) */
 .menu-wrapper {
