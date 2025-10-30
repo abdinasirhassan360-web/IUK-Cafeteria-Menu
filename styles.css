@@ -16,6 +16,29 @@ h1 {
   line-height: 1.1;
 }
 
+<<<<<<< HEAD
+=======
+h1 .restaurant {
+  color: #ffffff; /* first word */
+  display: block;
+  font-size: 40px;
+}
+
+h1 {
+  line-height: 1.05; /* keeps title compact */
+  margin-bottom: 5px; /* small gap below header */
+}
+
+h1 .menu-title {
+  color: #ffffff;
+  display: block;
+  margin-top: -33px;  /* stacks tightly without touching */
+  letter-spacing: 0.5px; /* keeps letters readable */
+  font-size: 40px;
+}
+
+
+>>>>>>> fix/header-layout
 h2 {
   font-size: 30px;
 }
@@ -50,6 +73,33 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
+=======
+  text-align: center;
+}
+
+.menu-header h1 {
+  flex: 1;             /* take up available middle space */
+  margin: 0;           /* remove weird spacing */
+}
+
+.logo {
+  max-width: 160px; /* desktop size */
+  height: auto;
+}
+
+/* On phones, shrink logos so they don't block header */
+@media (max-width: 600px) {
+  .logo {
+    max-width: 110px;  /* smaller size on mobile */
+  }
+}
+
+.menu {
+  width: 80%;         
+  max-width: 650px;   
+  min-width: 350px;
+>>>>>>> fix/header-layout
   background-color: white;
   padding: 12px 24px;        /* keep some inner padding but stay inside .menu */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -309,7 +359,13 @@ p {
   }
 
   .logo {
+<<<<<<< HEAD
     max-width: 80px;
+=======
+    display: block !important;
+    max-width: 200px;  /* slightly smaller for print */
+    height: auto;
+>>>>>>> fix/header-layout
   }
 
   a, button {
@@ -327,3 +383,24 @@ p {
   page-break-after: avoid;
   break-after: avoid;
 }
+<<<<<<< HEAD
+=======
+
+/* reduce header size a bit for printing to help fit everything */
+.menu-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+.menu-header .logo {
+  max-width: 200px; /* smaller logo for print */
+}
+@media print {
+  h1 {
+    line-height: 1.2; /* prevent overlapping */
+  }
+  h1 .menu-title {
+  margin-top: -26px;  /* gentle lift for print */
+  line-height: 1.0;
+}
+}
+>>>>>>> fix/header-layout
