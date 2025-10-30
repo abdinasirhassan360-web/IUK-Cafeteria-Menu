@@ -372,7 +372,7 @@ border-radius: 2px;
   /* Keep logos visible for branding */
   .logo {
     display: block !important;
-    max-width: 160px;  /* slightly smaller for print */
+    max-width: 200px;  /* slightly smaller for print */
     height: auto;
   }
   
@@ -399,7 +399,7 @@ border-radius: 2px;
   margin-bottom: 6px;
 }
 .menu-header .logo {
-  max-width: 120px; /* smaller logo for print */
+  max-width: 200px; /* smaller logo for print */
 }
 @media print {
   h1 {
