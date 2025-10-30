@@ -216,25 +216,23 @@ h1 {
 /* ---------- RESPONSIVE (phones) ---------- */
 @media (max-width: 700px) {
   .menu {
-    width: 98%;            /* restore original mobile width */
-    max-width: none;
+    width: min(94%, 350px);  /* identical to old phone width look */
     padding: 16px;
-    min-width: 0;
   }
-
-  .menu-grid {
-    grid-template-columns: 1fr; /* single column */
-  }
-
-  .menu-header {
+.menu-header {
     padding: 10px 8px;
     gap: 8px;
   }
 
   .logo {
-    max-height: 70px;
-    max-width: 48%;
+    max-height: 56px;
+    max-width: 30%;
   }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
 
   .menu-header img.left-logo {
     margin-left: -4px;
