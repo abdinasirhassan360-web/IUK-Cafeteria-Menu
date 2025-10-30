@@ -39,7 +39,6 @@ h1 {
   position: relative; /* allows shadows to render properly */
 }
 
-
 /* wrapper (keeps header + grid grouped) */
 .menu-wrapper {
   width: 100%;
@@ -80,8 +79,14 @@ h1 {
   display: block;
 }
 
-.logo.left-logo { margin-left: 0; }
-.logo.right-logo { margin-right: 0; }
+/* push logos closer to edges */
+.logo.left-logo {
+  margin-left: -10px;   /* pushes left logo closer to left edge */
+}
+
+.logo.right-logo {
+  margin-right: -10px;  /* pushes right logo closer to right edge */
+}
 
 /* ---------- GRID LAYOUT ---------- */
 .menu-grid {
@@ -234,6 +239,15 @@ h1 {
     max-width: 30%;
   }
 
+  /* keep logos close to edges on mobile too */
+  .logo.left-logo {
+    margin-left: -6px;
+  }
+
+  .logo.right-logo {
+    margin-right: -6px;
+  }
+
   .price {
     font-size: 18px;
     flex: 0 0 56px;
@@ -258,13 +272,20 @@ h1 {
     max-width: 22%;
   }
 
+  /* maintain tight edge alignment */
+  .logo.left-logo {
+    margin-left: -8px;
+  }
+
+  .logo.right-logo {
+    margin-right: -8px;
+  }
+
   .menu {
     width: 94%;
     padding: 18px;
   }
 }
-
-/* larger tablets and desktops remain two columns */
 
 /* ---------- SMALL HELPER ---------- */
 .menu-header h1,
