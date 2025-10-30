@@ -250,11 +250,12 @@ h1 {
   }
 
   .menu-grid section {
-    background: #fff;
+    background: transparent;
     padding: 10px;
     border-radius: 8px;
   }
 }
+
 
 /* ---------- LANDSCAPE PHONES ---------- */
 @media (max-width: 900px) and (orientation: landscape) {
