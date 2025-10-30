@@ -28,17 +28,18 @@ h1 {
 /* ---------- MENU CONTAINER ---------- */
 .menu {
   margin-top: 0;
-  width: 80%;
-  max-width: 650px;
+  width: 90%;               /* restore fuller width */
+  max-width: 750px;         /* allow slightly larger desktop size */
   min-width: 350px;
   background-color: white;
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* deeper directional shadow */
-  border-radius: 0; /* remove rounded corners */
-  position: relative; /* allows shadows to render properly */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  position: relative;
   box-sizing: border-box;
 }
+
 
 /* wrapper (keeps header + grid grouped) */
 .menu-wrapper {
