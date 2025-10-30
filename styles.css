@@ -1,13 +1,16 @@
 /* ---------- BASE STYLING ---------- */
 body {
-  background-color: #f5f5f5;
+  background-image: url("background-hero-image.png");
+  background-size: cover;         /* fills the entire viewport */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f5f5;      /* fallback if image doesn’t load */
   color: #13070c;
   font-family: 'Nunito', sans-serif;
   padding: 20px;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
 /* hide any h1 sub-elements if present (you removed the text) */
 h1 .restaurant,
@@ -27,12 +30,10 @@ h1 {
 
 /* ---------- MENU CONTAINER ---------- */
 .menu {
-  margin-top: 0;
-  width: 90%;               /* wide on desktop */
-  max-width: 750px;         /* cap width */
-  min-width: 350px;
-  background-color: white;
+  background-color: #ffffff;      /* solid white for clarity */
   margin: 0 auto;
+  width: 90%;
+  max-width: 750px;
   padding: 20px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
   border-radius: 0;
