@@ -255,7 +255,9 @@ h1 {
     border-radius: 8px;
   }
 }
-
+.no-break {
+  white-space: nowrap;
+}
 
 /* ---------- LANDSCAPE PHONES ---------- */
 @media (max-width: 900px) and (orientation: landscape) {
