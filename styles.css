@@ -9,6 +9,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+  }
+}
 /* hide any h1 sub-elements if present (you removed the text) */
 h1 .restaurant,
 h1 .menu-title {
