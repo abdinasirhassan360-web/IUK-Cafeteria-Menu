@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cafe Menu</title>
-    <link href="styles.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Default favicon (fallback) -->
-    <link rel="icon" type="image/png" href="favicon-light.png">
-     <!-- Light mode favicon -->
-    <link rel="icon" type="image/png" href="favicon-light.png" media="(prefers-color-scheme: light)">
-      <!-- Dark mode favicon -->
-    <link rel="icon" type="image/png" href="favicon-dark.png" media="(prefers-color-scheme: dark)">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafeteria Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="favicon-light.png">
+  <link rel="icon" type="image/png" href="favicon-light.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="favicon-dark.png" media="(prefers-color-scheme: dark)">
 
-  </head>
-  <body>
-    <div class="menu">
-      <!-- new wrapper groups header + grid so they print together -->
-      <div class="menu-wrapper">
-        <div class="menu-header">
-          <img src="images/iuk-logo-with-text.png" alt="IUK Logo" class="logo left-logo">
-          <h1>
-            
-          </h1>
-          <img src="images/cafeteria-menu-text.png" alt="IUK Logo" class="logo right-logo">
-        </div>
+  <!-- ✅ PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
 
+  <!-- ✅ App Icons for devices -->
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-512.png">
+
+  <!-- ✅ Theme colors -->
+  <meta name="theme-color" content="#b22222">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+
+  <!-- ✅ iOS fullscreen mode -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+
+<body>
+  <div class="menu">
+    <div class="menu-wrapper">
+      <div class="menu-header">
+        <img src="images/iuk-logo-with-text.png" alt="IUK Logo" class="logo left-logo">
+        <h1> </h1> 
+        <img src="images/cafeteria-menu-text.png" alt="Cafeteria Menu Text" class="logo right-logo">
+      </div>
       <div class="menu-grid">
+
+        <!-- BREAKFAST -->
         <section>
           <h2>BREAKFAST</h2>
           <article class="item"><p class="dessert">Chapati Plain (1 Piece)</p><p class="price">20/-</p></article>
@@ -34,9 +45,16 @@
           <article class="item"><p class="flavor">Fried Eggs (2 Eggs)</p><p class="price">60/-</p></article>
           <article class="item"><p class="flavor">Rolex (1 Chapati)</p><p class="price">80/-</p></article>
           <article class="item"><p class="flavor">Rolex (2 Chapatis)</p><p class="price">100/-</p></article>
-          <article class="item"><div class="flavor-block"><p class="main">Spanish Omelet</p><p class="details">(With 1 Chapati)</p></div><p class="price">150/-</p></article>
+          <article class="item">
+            <div class="flavor-block">
+              <p class="main">Spanish Omelet</p>
+              <p class="details">(With 1 Chapati)</p>
+            </div>
+            <p class="price">150/-</p>
+          </article>
         </section>
 
+        <!-- SNACKS -->
         <section>
           <h2>SNACKS</h2>
           <article class="item"><p class="dessert">Maandazi</p><p class="price">10/-</p></article>
@@ -45,10 +63,11 @@
           <article class="item"><p class="dessert">Beef Samosa</p><p class="price">50/-</p></article>
           <article class="item"><p class="dessert">Beef Sausage</p><p class="price">50/-</p></article>
           <article class="item"><p class="dessert">Beef Smokey</p><p class="price">40/-</p></article>
-          <article class="item"><p class="dessert">Chips Plain -Small</p><p class="price">50/-</p></article>
-          <article class="item"><p class="dessert">Chips Plain -Large</p><p class="price">100/-</p></article>
+          <article class="item"><p class="dessert">Chips Plain - Small</p><p class="price">50/-</p></article>
+          <article class="item"><p class="dessert">Chips Plain - Large</p><p class="price">100/-</p></article>
         </section>
 
+        <!-- MAIN MEALS -->
         <section>
           <h2>MAIN MEALS</h2>
           <article class="item"><p class="main">Pilau</p><p class="price">150/-</p></article>
@@ -64,19 +83,21 @@
           <article class="item"><p class="main">Ugali</p><p class="price">50/-</p></article>
         </section>
 
+        <!-- SIDES & VEGGIES -->
         <section>
           <h2>SIDES & VEGGIES</h2>
           <article class="item"><p class="appetizer">Managu</p><p class="price">60/-</p></article>
           <article class="item"><p class="appetizer">Spinach</p><p class="price">30/-</p></article>
           <article class="item"><p class="appetizer">Cabbage</p><p class="price">30/-</p></article>
           <article class="item"><p class="appetizer">Beans</p><p class="price">50/-</p></article>
-          <article class="item"><p class="appetizer">Matumbo(Plain)</p><p class="price">70/-</p></article>
+          <article class="item"><p class="appetizer">Matumbo (Plain)</p><p class="price">70/-</p></article>
           <article class="item"><p class="appetizer">Pojo/Ndengu</p><p class="price">50/-</p></article>
           <article class="item"><p class="appetizer">Beef Stew</p><p class="price">100/-</p></article>
           <article class="item"><p class="appetizer">Vegetable Stew</p><p class="price">50/-</p></article>
           <article class="item"><p class="appetizer">Potato Stew</p><p class="price">50/-</p></article>
         </section>
 
+        <!-- HOT BEVERAGES -->
         <section>
           <h2>HOT BEVERAGES</h2>
           <article class="item"><p class="drink">Black Tea</p><p class="price">30/-</p></article>
@@ -104,15 +125,16 @@
           </article>
         </section>
 
+        <!-- COLD BEVERAGES -->
         <section>
           <h2>COLD BEVERAGES</h2>
-          <article class="item"><p class="dessert">Soda 350ml</p><p class="price"><span class="no-break">50-60/-</span></p></article>
+          <article class="item"><p class="dessert">Soda 350ml</p><p class="price"><span class="no-break">50–60/-</span></p></article>
           <article class="item"><p class="dessert">Soda 500ml</p><p class="price">80/-</p></article>
           <article class="item"><p class="dessert">Minute Maid 400ml</p><p class="price">50/-</p></article>
           <article class="item"><p class="dessert">Mineral Water 500ml</p><p class="price">30/-</p></article>
-          <article class="item"><p class="dessert">Mineral Water 1litre</p><p class="price">60/-</p></article>
+          <article class="item"><p class="dessert">Mineral Water 1 litre</p><p class="price">60/-</p></article>
 
-          <h3 class="sub-category">FRESH JUICE:</h3>
+          <h3 class="sub-category">FRESH JUICE</h3>
           <article class="item"><p class="dessert">Mango</p><div class="price-list"><span>Small 60/-</span><span>Large 100/-</span></div></article>
           <article class="item"><p class="dessert">Passion</p><div class="price-list"><span>Small 60/-</span><span>Large 100/-</span></div></article>
           <article class="item"><p class="dessert">Pineapple Mint</p><div class="price-list"><span>Small 60/-</span><span>Large 100/-</span></div></article>
@@ -128,85 +150,83 @@
             <div class="price-list"><span>Small 60/-</span><span>Large 100/-</span></div>
           </article>
         </section>
-      </div> <!-- .menu-grid -->
-    </div> <!-- .menu -->
-  </body>
-  <!-- Install Button -->
-<button id="installBtn" style="
-  display: none;
-  background-color: #b22222;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  animation: pulse 2s infinite;
-">
-  📱 Add to Home Screen
-</button>
 
-<!-- Success Message -->
-<div id="installSuccess" style="
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #16a34a;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-size: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-">
-  ✅ Added to Home Screen
-</div>
-<script>
-  let deferredPrompt;
-  const installBtn = document.getElementById('installBtn');
-  const successMsg = document.getElementById('installSuccess');
+      </div> <!-- /.menu-grid -->
+    </div> <!-- /.menu-wrapper -->
+  </div> <!-- /.menu -->
 
-  // Listen for beforeinstallprompt event
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = 'block';
-  });
+  <!-- ✅ Install Button -->
+  <button id="installBtn" style="
+    display: none;
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    animation: pulse 2s infinite;
+  ">
+    📱 Add to Home Screen
+  </button>
 
-  // Handle install button click
-  installBtn.addEventListener('click', async () => {
-    installBtn.style.display = 'none';
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        // Show success message
-        successMsg.style.display = 'block';
-        setTimeout(() => {
-          successMsg.style.display = 'none';
-        }, 3000); // Hide after 3 seconds
+  <!-- ✅ Success Message -->
+  <div id="installSuccess" style="
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #16a34a;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  ">
+    ✅ Added to Home Screen
+  </div>
+
+  <!-- ✅ JS Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+    const successMsg = document.getElementById('installSuccess');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = 'block';
+    });
+
+    installBtn.addEventListener('click', async () => {
+      installBtn.style.display = 'none';
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+          successMsg.style.display = 'block';
+          setTimeout(() => successMsg.style.display = 'none', 3000);
+        }
+        deferredPrompt = null;
       }
-      deferredPrompt = null;
+    });
+
+    window.addEventListener('appinstalled', () => {
+      installBtn.style.display = 'none';
+      successMsg.style.display = 'block';
+      setTimeout(() => successMsg.style.display = 'none', 3000);
+    });
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('✅ Service Worker registered!'))
+        .catch(err => console.log('❌ SW registration failed:', err));
     }
-  });
-
-  // Detect if app is already installed (hide button)
-  window.addEventListener('appinstalled', () => {
-    installBtn.style.display = 'none';
-    successMsg.style.display = 'block';
-    setTimeout(() => {
-      successMsg.style.display = 'none';
-    }, 3000);
-  });
-
-  // Register service worker
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js');
-  }
-</script>
-
+  </script>
+</body>
 </html>
