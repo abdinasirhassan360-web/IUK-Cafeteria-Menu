@@ -131,4 +131,82 @@
       </div> <!-- .menu-grid -->
     </div> <!-- .menu -->
   </body>
+  <!-- Install Button -->
+<button id="installBtn" style="
+  display: none;
+  background-color: #b22222;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: pulse 2s infinite;
+">
+  📱 Add to Home Screen
+</button>
+
+<!-- Success Message -->
+<div id="installSuccess" style="
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #16a34a;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+">
+  ✅ Added to Home Screen
+</div>
+<script>
+  let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+  const successMsg = document.getElementById('installSuccess');
+
+  // Listen for beforeinstallprompt event
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = 'block';
+  });
+
+  // Handle install button click
+  installBtn.addEventListener('click', async () => {
+    installBtn.style.display = 'none';
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        // Show success message
+        successMsg.style.display = 'block';
+        setTimeout(() => {
+          successMsg.style.display = 'none';
+        }, 3000); // Hide after 3 seconds
+      }
+      deferredPrompt = null;
+    }
+  });
+
+  // Detect if app is already installed (hide button)
+  window.addEventListener('appinstalled', () => {
+    installBtn.style.display = 'none';
+    successMsg.style.display = 'block';
+    setTimeout(() => {
+      successMsg.style.display = 'none';
+    }, 3000);
+  });
+
+  // Register service worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
 </html>
