@@ -4,32 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cafeteria Menu</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="favicon-light.png">
-  <link rel="icon" type="image/png" href="favicon-light.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" href="favicon-dark.png" media="(prefers-color-scheme: dark)">
 
-  <!-- ✅ PWA Manifest -->
+  <!-- Favicon (default to light, dynamic switch added via JS) -->
+  <link rel="icon" type="image/png" href="favicon-light.png">
+
+  <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json">
 
-  <!-- ✅ App Icons for devices -->
+  <!-- App Icons for devices -->
   <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
   <link rel="apple-touch-icon" href="icons/icon-512.png">
 
-  <!-- ✅ Theme & PWA colors -->
-<meta name="theme-color" content="#29607b" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#231f20" media="(prefers-color-scheme: dark)">
+  <!-- Theme colors -->
+  <meta name="theme-color" content="#29607b" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#231f20" media="(prefers-color-scheme: dark)">
 
-<!-- ✅ iOS Status Bar (for Home Screen apps) -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-
-
-  <!-- ✅ iOS fullscreen mode -->
+  <!-- iOS fullscreen & status bar -->
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
 </head>
 
 <body>
@@ -40,11 +36,11 @@
         <h1> </h1> 
         <img src="images/cafeteria-menu-text.png" alt="Cafeteria Menu Text" class="logo right-logo">
       </div>
-      <div class="menu-grid">
 
+      <div class="menu-grid">
         <!-- BREAKFAST -->
         <section>
-          <h2>BREAKFAST</h2>
+          <h2></h2>
           <article class="item"><p class="dessert">Chapati Plain (1 Piece)</p><p class="price">20/-</p></article>
           <article class="item"><p class="flavor">Boiled Egg</p><p class="price">30/-</p></article>
           <article class="item"><p class="flavor">Fried Eggs (2 Eggs)</p><p class="price">60/-</p></article>
@@ -61,7 +57,7 @@
 
         <!-- SNACKS -->
         <section>
-          <h2>SNACKS</h2>
+          <h2></h2>
           <article class="item"><p class="dessert">Maandazi</p><p class="price">10/-</p></article>
           <article class="item"><p class="dessert">Ndengu Samosa (Small)</p><p class="price">10/-</p></article>
           <article class="item"><p class="dessert">Potato Samosa (Small)</p><p class="price">10/-</p></article>
@@ -74,7 +70,7 @@
 
         <!-- MAIN MEALS -->
         <section>
-          <h2>MAIN MEALS</h2>
+          <h2></h2>
           <article class="item"><p class="main">Pilau</p><p class="price">150/-</p></article>
           <article class="item"><div class="flavor-block"><p class="main">Chapati Choma</p><p class="details">(2 Pieces)</p></div><p class="price">50/-</p></article>
           <article class="item"><p class="main">Chips Masala</p><p class="price">150/-</p></article>
@@ -90,7 +86,7 @@
 
         <!-- SIDES & VEGGIES -->
         <section>
-          <h2>SIDES & VEGGIES</h2>
+          <h2></h2>
           <article class="item"><p class="appetizer">Managu</p><p class="price">60/-</p></article>
           <article class="item"><p class="appetizer">Spinach</p><p class="price">30/-</p></article>
           <article class="item"><p class="appetizer">Cabbage</p><p class="price">30/-</p></article>
@@ -104,7 +100,7 @@
 
         <!-- HOT BEVERAGES -->
         <section>
-          <h2>HOT BEVERAGES</h2>
+          <h2></h2>
           <article class="item"><p class="drink">Black Tea</p><p class="price">30/-</p></article>
           <article class="item"><p class="drink">Milk Tea</p><p class="price">30/-</p></article>
           <article class="item"><p class="drink">Special Tea (White Only)</p><p class="price">50/-</p></article>
@@ -132,7 +128,7 @@
 
         <!-- COLD BEVERAGES -->
         <section>
-          <h2>COLD BEVERAGES</h2>
+          <h2></h2>
           <article class="item"><p class="dessert">Soda 350ml</p><p class="price"><span class="no-break">50–60/-</span></p></article>
           <article class="item"><p class="dessert">Soda 500ml</p><p class="price">80/-</p></article>
           <article class="item"><p class="dessert">Minute Maid 400ml</p><p class="price">50/-</p></article>
@@ -155,12 +151,11 @@
             <div class="price-list"><span>Small 60/-</span><span>Large 100/-</span></div>
           </article>
         </section>
+      </div>
+    </div>
+  </div>
 
-      </div> <!-- /.menu-grid -->
-    </div> <!-- /.menu-wrapper -->
-  </div> <!-- /.menu -->
-
-  <!-- ✅ Install Button -->
+  <!-- Install Button -->
   <button id="installBtn" style="
     display: none;
     background-color: #29607b;
@@ -179,7 +174,7 @@
     📱 Add to Home Screen
   </button>
 
-  <!-- ✅ Success Message -->
+  <!-- Success Message -->
   <div id="installSuccess" style="
     display: none;
     position: fixed;
@@ -195,9 +190,10 @@
     ✅ Added to Home Screen
   </div>
 
-  <!-- ✅ JS Scripts -->
+  <!-- JS Scripts -->
   <script src="js/main.js"></script>
   <script>
+    // PWA Install Prompt
     let deferredPrompt;
     const installBtn = document.getElementById('installBtn');
     const successMsg = document.getElementById('installSuccess');
@@ -227,11 +223,31 @@
       setTimeout(() => successMsg.style.display = 'none', 3000);
     });
 
+    // Register Service Worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
         .then(() => console.log('✅ Service Worker registered!'))
         .catch(err => console.log('❌ SW registration failed:', err));
     }
+
+    // Dynamic Favicon for light/dark mode
+    const lightFavicon = "favicon-light.png";
+    const darkFavicon = "favicon-dark.png";
+
+    function updateFavicon() {
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      let favicon = document.querySelector('link[rel="icon"]');
+      if (!favicon) {
+        favicon = document.createElement('link');
+        favicon.rel = 'icon';
+        favicon.type = 'image/png';
+        document.head.appendChild(favicon);
+      }
+      favicon.href = isDark ? darkFavicon : lightFavicon;
+    }
+
+    updateFavicon();
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
   </script>
 </body>
 </html>
