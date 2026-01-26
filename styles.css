@@ -345,22 +345,35 @@ h1 {
 /* ---------- MOBILE COLLAPSE ---------- */
 @media (max-width: 700px) {
   .menu-footer {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .footer-left {
     align-items: center;
   }
 
+  .footer-right {
+    justify-content: center;
+    width: 100%;
+  }
+
   .iuk-logo {
-    max-height: 45px;
+    max-height: 42px;
   }
 
   .paybill-image {
     max-height: 70px;
+    max-width: 85%;
   }
 
   .location-name {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
+
 /* ---------- MENU FOOTER (INSIDE FLEX CONTAINER) ---------- */
 .menu-footer {
   display: flex;
