@@ -299,15 +299,6 @@ h1 {
   100% { transform: scale(1); }
 }
 /* ---------- FOOTER: LOCATION & PAYMENT ---------- */
-.menu-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 2px solid #A4243B;
-}
 
 /* LEFT SIDE */
 .footer-left {
@@ -378,7 +369,9 @@ h1 {
   gap: 16px;
   margin-top: 20px;
   padding-top: 14px;
+  /* border-top: 2px solid #A4243B; */
 }
+
 
 /* LEFT BLOCK */
 .footer-left {
