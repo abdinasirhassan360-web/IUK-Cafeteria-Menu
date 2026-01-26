@@ -78,8 +78,8 @@ h1 {
 
 /* ---------- LOGOS ---------- */
 .logo {
-  max-height: 72px;
-  max-width: 28%;
+  max-height: 100px;
+  max-width: 35%;
   width: auto;
   height: auto;
   flex: 0 0 auto;
